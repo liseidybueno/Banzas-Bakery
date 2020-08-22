@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gallery</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="faviconlogo.ico">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- fonts  -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/16aa750f43.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <div class="lightgray-bg">
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <img src="images/logo.png" width="10%" alt="" loading="lazy">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="gallery.html">Gallery<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Gallery section div -->
+    <div class="gallery-section">
+
+      <h2>gallery</h2>
+
+      <p>
+
+      </p>
+
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="dropdown">
+
+            <select class="custom-select" id="filterMenu" name="filterMenu">
+              <option selected>Filter</option>
+              <option value="dropdownCakes">Cakes</option>
+              <option value="dropdownCupcakes">Cupcakes</option>
+              <option value="dropdownCookies">Cookies</option>
+              <option value="dropdownOther">Other Sweets</option>
+            </select>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CAKES ONLY -->
+      <!-- ROW 1 -->
+
+      <div class="cakes-section">
+
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg1" src="images/cakes/cake1.jpg">
+
+            <div id="modalcakeImg1" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg1Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg2" src="images/cakes/cake2.jpg">
+
+            <div id="modalcakeImg2" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg2Modal">
+
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg3" src="images/cakes/cake3.jpeg">
+
+            <div id="modalcakeImg3" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg3Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg4" src="images/cakes/cake4.jpg">
+
+            <div id="modalcakeImg4" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg4Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ROW 2 -->
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg5" src="images/cakes/cake5.jpg">
+
+            <div id="modalcakeImg5" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg5Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg6" src="images/cakes/cake6.jpeg">
+
+            <div id="modalcakeImg6" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg6Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg7" src="images/cakes/cake7.jpeg">
+
+            <div id="modalcakeImg7" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg7Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg8" src="images/cakes/cake8.jpg">
+
+            <div id="modalcakeImg8" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg8Modal">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg9" src="images/cakes/cake9.jpg">
+
+            <div id="modalcakeImg9" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg9Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg10" src="images/cakes/cake10.jpeg">
+
+            <div id="modalcakeImg10" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg10Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg11" src="images/cakes/cake11.jpg">
+
+            <div id="modalcakeImg11" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg11Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg12" src="images/cakes/cake12.jpg">
+
+            <div id="modalcakeImg12" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg12Modal">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg13" src="images/cakes/cake13.jpg">
+
+            <div id="modalcakeImg13" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg13Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg14" src="images/cakes/cake14.jpg">
+
+            <div id="modalcakeImg14" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg14Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg15" src="images/cakes/cake15.jpg">
+
+            <div id="modalcakeIm153" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg15Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg16" src="images/cakes/cake16.jpg">
+
+            <div id="modalcakeImg16" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg16Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ROW 5 -->
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg17" src="images/cakes/cake17.jpg">
+
+            <div id="modalcakeImg17" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg17Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg18" src="images/cakes/cake18.jpg">
+
+            <div id="modalcakeImg18" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg18Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg19" src="images/cakes/cake19.jpg">
+
+            <div id="modalcakeImg19" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg19Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg20" src="images/cakes/cake20.jpeg">
+
+            <div id="modalcakeImg20" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg20Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ROW 6 -->
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg21" src="images/cakes/cake21.jpg">
+
+            <div id="modalcakeImg21" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg21Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg22" src="images/cakes/cake22.jpg">
+
+            <div id="modalcakeImg22" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg3Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg23" src="images/cakes/cake23.jpeg">
+
+            <div id="modalcakeImg23" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg23Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg24" src="images/cakes/cake24.jpg">
+
+            <div id="modalcakeImg24" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg24Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ROW 7 -->
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg25" src="images/cakes/cake25.jpeg">
+
+            <div id="modalcakeImg25" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg25Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg26" src="images/cakes/cake26.jpg">
+
+            <div id="modalcakeImg26" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg26Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg27" src="images/cakes/cake27.jpg">
+
+            <div id="modalcakeImg27" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg27Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg28" src="images/cakes/cake28.jpeg">
+
+            <div id="modalcakeImg28" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg28Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+        <!--
+ROW 8 -->
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg29" src="images/cakes/cake29.jpeg">
+
+            <div id="modalcakeImg29" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg29Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cakeImg30" src="images/cakes/cake30.jpg">
+
+            <div id="modalcakeImg30" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cakeImg30Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CUPCAKES SECTION -->
+
+      <div class="cupcakes-section">
+
+        <!-- ROW 1 -->
+
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg1" src="images/cupcakes/cupcakes1.jpeg">
+
+            <div id="modalcupcakeImg1" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg1Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg2" src="images/cupcakes/cupcakes2.jpeg">
+
+            <div id="modalcupcakeImg2" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg1Moda2">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg3" src="images/cupcakes/cupcakes3.jpeg">
+
+            <div id="modalcupcakeImg3" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg3Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg4" src="images/cupcakes/cupcakes4.jpeg">
+
+            <div id="modalcupcakeImg4" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg4Modal">
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg5" src="images/cupcakes/cupcakes5.jpg">
+
+            <div id="modalcupcakeImg5" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg5Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg6" src="images/cupcakes/cupcakes6.jpg">
+
+            <div id="modalcupcakeImg6" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg6Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg7" src="images/cupcakes/cupcakes7.jpeg">
+
+            <div id="modalcupcakeImg7" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg7Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg8" src="images/cupcakes/cupcakes8.jpg">
+
+            <div id="modalcupcakeImg8" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg8Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg9" src="images/cupcakes/cupcakes9.jpeg">
+
+            <div id="modalcupcakeImg9" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg9Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg10" src="images/cupcakes/cupcakes10.jpeg">
+
+            <div id="modalcupcakeImg10" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg10Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cupcakeImg11" src="images/cupcakes/cupcakes11.jpeg">
+
+            <div id="modalcupcakeImg11" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cupcakeImg11Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- COOKIES SECTION -->
+
+      <div class="cookies-section">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg1" src="images/cookies/cookies1.jpeg">
+
+            <div id="modalcookiesImg1" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg1Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg2" src="images/cookies/cookies2.jpeg">
+
+            <div id="modalcookiesImg2" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg2Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg3" src="images/cookies/cookies3.jpeg">
+
+            <div id="modalcookiesImg3" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg3Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg4" src="images/cookies/cookies4.jpeg">
+
+            <div id="modalcookiesImg4" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg4Modal">
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg5" src="images/cookies/cookies5.jpeg">
+
+            <div id="modalcookiesImg5" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg5Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg6" src="images/cookies/cookies6.jpeg">
+
+            <div id="modalcookiesImg6" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg6Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg7" src="images/cookies/cookies7.jpg">
+
+            <div id="modalcookiesImg7" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg7Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg8" src="images/cookies/cookies8.jpeg">
+
+            <div id="modalcookiesImg8" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg8Modal">
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg9" src="images/cookies/cookies9.jpeg">
+
+            <div id="modalcookiesImg9" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg9Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg10" src="images/cookies/cookies10.jpeg">
+
+            <div id="modalcookiesImg10" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg10Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg11" src="images/cookies/cookies11.jpeg">
+
+            <div id="modalcookiesImg11" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg11Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg12" src="images/cookies/cookies12.jpg">
+
+            <div id="modalcookiesImg12" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg12Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg13" src="images/cookies/cookies13.jpeg">
+
+            <div id="modalcookiesImg13" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg13Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="cookiesImg14" src="images/cookies/cookies14.jpeg">
+
+            <div id="modalcookiesImg14" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="cookiesImg14Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- OTHER SWEETS SECTION -->
+
+      <div class="other-section">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="otherImg1" src="images/othersweets/othersweets1.jpg">
+
+            <div id="modalotherImg1" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="otherImg1Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="otherImg2" src="images/othersweets/othersweets2.jpeg">
+
+            <div id="modalotherImg2" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="otherImg2Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="otherImg3" src="images/othersweets/othersweets3.jpeg">
+
+            <div id="modalotherImg3" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="otherImg3Modal">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="otherImg4" src="images/othersweets/othersweets4.jpg">
+
+            <div id="modalotherImg4" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="otherImg4Modal">
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="otherImg5" src="images/othersweets/othersweets5.jpeg">
+
+            <div id="modalotherImg5" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="otherImg1Moda5">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <img class="gallery-img" id="otherImg6" src="images/othersweets/othersweets6.jpeg">
+
+            <div id="modalotherImg6" class="modal">
+
+              <span class="close">&times;</span>
+
+              <img class="modal-content" id="otherImg6Modal">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <footer>
+
+    <a href="https://www.instagram.com/banzasbakery"><i class="fab fa-instagram fa-2x"></i></a>
+    <br><br><br>
+    <p>© 2020 Banza's Bakery</p>
+    <p>
+      Site by <a href="https://liseidybueno.github.io/cv/">Liseidy Bueno</a>
+    </p>
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="js/gallery.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>

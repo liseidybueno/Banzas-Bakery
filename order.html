@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Order</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="faviconlogo.ico">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- fonts  -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/16aa750f43.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="lightgray-bg">
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <img src="images/logo.png" width="10%" alt="" loading="lazy">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="order.html">Order<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="order-section">
+
+      <div class="row">
+        <div class="col">
+          <h2>order</h2>
+        </div>
+      </div>
+
+      <form id="order-form">
+        <div class="form-row">
+          <div class="form-group col-lg-6 col-md-6">
+            <input type="text" class="form-control" placeholder="First name" required>
+          </div>
+          <div class="form-group col-lg-6 col-md-6">
+            <input type="text" class="form-control" placeholder="Last name" required>
+          </div>
+        </div>
+        <div class="form-row form-col">
+          <input type="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="form-row form-col">
+          <select class="form-control" id="selectSweets" onchange="chooseSweets()" required>
+            <option value="" disabled selected>
+              Select Sweets:
+            </option>
+            <option value="threeLayerCakes">Three Layer Cakes</option>
+            <option value="sheetCakes">Sheet Cakes</option>
+            <option value="barbieCakes">Barbie Cakes (serves 8-10) $250</option>
+            <option value="cheesecakes">Cheesecakes (serves 15-17)</option>
+            <option value="cupcakes">Cupcakes (1 dozen minimum)</option>
+            <option value="cookies">Cookies $30/dozen (Pick-Up & Delivery)</option>
+            <option value="cookiesEtsy">Cookies $30/dozen + Shipping (To be shipped)</option>
+          </select>
+        </div>
+
+        <!-- IF USER CHOOSES 3 layer CAKES:  -->
+        <!-- select cake flavors  -->
+        <div class="form-row form-col" id ="cakeFlavors">
+          <select class="form-control" id="selectCakeFlavors" required>
+            <option value="" disabled selected>Select Flavor:</option>
+            <option value="cakechoc">Chocolate</option>
+            <option value="cakevanilla">Vanilla</option>
+            <option value="cakeredvelvet">Red Velvet</option>
+
+          </select>
+
+        </div>
+
+        <!-- CUPCAKE OPTIONS -->
+        <!-- basic or custom -->
+        <div class="form-check basicCupcake">
+        <input class="form-check-input" type="radio" name="basicCustomCC" value="basicCC" required>
+        <label class="form-check-label" for="basic">
+        Basic - $2.25/cupcake or $27/dozen
+        </label>
+        </div>
+        <div class="form-check customCupcake">
+        <input class="form-check-input" type="radio" name="basicCustomCC" value="customCC" required>
+        <label class="form-check-label" for="customCC">
+        Custom - $2.75/cupcake or $33/dozen
+        </label>
+        </div>
+
+        <div class="form-check cupcakeAmount">
+          <input type="text" class="form-control" id="cupcakeAmt" placeholder="Amount of Cupcakes (enter a number)" required>
+        </div>
+
+        <!-- COOKIES OPTIONS -->
+        <!-- handwritten note -->
+        <div class="form-check cookiesNote">
+        <input class="form-check-input" type="radio" name="cookiesNote" value="cookiesNote">
+        <label class="form-check-label" for="cookiesNote">
+        Hand-written Note: +$2
+        </label>
+        </div>
+        <!-- cookies amount -->
+        <div class="form-check cookieAmount">
+          <input type="number" class="form-control" id="cookieAmt" placeholder="Amount of Cookies (enter a number)" required>
+        </div>
+
+        <!-- select sayings -->
+        <div class = "form-row form-col" id="cookieSayings">
+          <select class="form-control" id="selectCookieSayings" required>
+            <option value="" disabled selected>Select Saying:</option>
+            <option value="stayPos">Stay Positive</option>
+            <option value="storms">Storms don't last forever</option>
+            <option value="thankYou">Thank you</option>
+            <option value="happyBday">Happy Birthday</option>
+
+          </select>
+        </div>
+
+
+        <!-- select cake sizes -->
+        <div class = "form-row form-col" id="cakeSizes" onchange = "cakeFrosting()">
+          <select class="form-control" id="selectCakeSizes" required>
+            <option value="" disabled selected>Select Size:</option>
+            <option value="eightIn">Eight Inch</option>
+            <option value="nineIn">Nine Inch</option>
+            <option value="tenIn">Ten Inch</option>
+
+          </select>
+        </div>
+
+        <!-- select sheet cake sizes -->
+        <div class = "form-row form-col" id="sheetCakeSizes" onchange = "sheetCakeFrosting()">
+          <select class="form-control" id="selectSheetCakeSizes" required>
+            <option value="" disabled selected>Select Size:</option>
+            <option value="half">Half: 10.5" x 7"</option>
+            <option value="full">Full: 14" x 10.5"</option>
+
+          </select>
+        </div>
+
+        <!-- select frosting -->
+        <div class = "form-row form-col" id="cakeFrosting">
+          <select class="form-control" id="selectcakeFrosting" required>
+            <option value="" disabled selected>Select Frosting:</option>
+            <option value="buttercream" id="buttercream"></option>
+            <option value="fondant" id="fondant"></option>
+
+          </select>
+        </div>
+
+        <!-- CHEESECAKE OPTIONS -->
+        <!-- basic or custom -->
+
+        <div class="form-check basicCheese">
+  <input class="form-check-input" type="radio" name="basicCustom" value="basiccheese" required>
+  <label class="form-check-label" for="basiccheese">
+    Basic - $35
+  </label>
+</div>
+<div class="form-check customCheese">
+  <input class="form-check-input" type="radio" name="basicCustom" value="customcheese" required>
+  <label class="form-check-label" for="customcheese">
+    Custom - $45
+  </label>
+</div>
+
+<!-- cupcake vegan -->
+<div class="form-check" id="veganCupcakeCheckbox">
+  <input class="form-check-input" type="checkbox" value="" id="veganCC">
+  <label class="form-check-label" for="veganCC">
+    Vegan: + $.25 per cupcake
+  </label>
+</div>
+
+
+
+<!-- OPTIONS THAT APPEAR FOR ALL -->
+        <br>
+
+        <!-- select vegan -->
+        <div class="form-check" id="veganCheckbox">
+          <input class="form-check-input" type="checkbox" value="" id="vegan">
+          <label class="form-check-label" for="vegan">
+            Vegan: + $5
+          </label>
+        </div>
+
+        <!-- order date -->
+        <div class="form-check" id="orderDate">
+          <label for="order">Event Date: </label>
+          <input type="date" value="date" id="order" required>
+
+        </div>
+
+        <!-- pick up or delivery -->
+        <div class="form-check pickup">
+  <input class="form-check-input" type="radio" name="pickupDelivery" id="pickUp" value="pickup" required>
+  <label class="form-check-label" for="exampleRadios1">
+    Pick Up
+  </label>
+</div>
+<div class="form-check delivery">
+  <input class="form-check-input" type="radio" name="pickupDelivery" id="delivery" value="delivery" required>
+  <label class="form-check-label" for="delivery">
+    Delivery
+  </label>
+</div>
+
+
+
+        <div class="form-row form-col" id="addComment">
+      <textarea class="form-control" rows="6" placeholder="Additional Comments"></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark" id="submit" onclick="checkAmount()">Submit</button>
+
+
+
+      </form>
+    </div>
+
+  </div>
+
+  <script src="js/order.js" charset="utf-8"></script>
+
+  <footer>
+
+    <a href="https://www.instagram.com/banzasbakery"><i class="fab fa-instagram fa-2x"></i></a>
+    <br><br><br>
+    <p>© 2020 Banza's Bakery</p>
+    <p>
+      Site by <a href="https://liseidybueno.github.io/cv/">Liseidy Bueno</a>
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
