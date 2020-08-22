@@ -7,7 +7,7 @@ function chooseSweets() {
     document.getElementById("cakeFlavors").style.display = "inline";
     document.getElementById("cakeSizes").style.display = "inline";
     document.getElementById("cakeFrosting").style.display = "inline";
-    document.getElementById("veganCheckbox").style.display = "inline";
+    document.getElementById("vegan10dollars").style.display = "inline";
     document.getElementById("orderDate").style.display = "inline";
     document.querySelector(".pickup").style.display = "inline";
     document.querySelector(".delivery").style.display = "inline";
@@ -20,10 +20,11 @@ function chooseSweets() {
     document.querySelector(".basicCupcake").style.display = "none";
     document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("veganCupcakeCheckbox").style.display = "none";
+    document.getElementById("vegan5dollars").style.display = "none";
     document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
     document.getElementById("cookieSayings").style.display = "none";
+    document.getElementById("veganCookies").style.display = "none";
 
 
 
@@ -32,7 +33,7 @@ function chooseSweets() {
     document.getElementById("cakeFlavors").style.display = "inline";
     document.getElementById("sheetCakeSizes").style.display = "inline";
     document.getElementById("cakeFrosting").style.display = "inline";
-    document.getElementById("veganCheckbox").style.display = "inline";
+    document.getElementById("vegan10dollars").style.display = "inline";
     document.getElementById("orderDate").style.display = "inline";
     document.querySelector(".pickup").style.display = "inline";
     document.querySelector(".delivery").style.display = "inline";
@@ -45,16 +46,17 @@ function chooseSweets() {
     document.querySelector(".basicCupcake").style.display = "none";
     document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("veganCupcakeCheckbox").style.display = "none";
+    document.getElementById("vegan5dollars").style.display = "none";
     document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
     document.getElementById("cookieSayings").style.display = "none";
+    document.getElementById("veganCookies").style.display = "none";
 
 
   } else if(sweets === "barbieCakes") {
 
     document.getElementById("cakeFlavors").style.display = "inline";
-    document.getElementById("veganCheckbox").style.display = "inline";
+    document.getElementById("vegan10dollars").style.display = "inline";
     document.getElementById("orderDate").style.display = "inline";
     document.querySelector(".pickup").style.display = "inline";
     document.querySelector(".delivery").style.display = "inline";
@@ -68,17 +70,17 @@ function chooseSweets() {
     document.querySelector(".basicCupcake").style.display = "none";
     document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("veganCupcakeCheckbox").style.display = "none";
+    document.getElementById("vegan5dollars").style.display = "none";
     document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
     document.getElementById("cookieSayings").style.display = "none";
     document.getElementById("cakeFrosting").style.display = "none";
+    document.getElementById("veganCookies").style.display = "none";
 
 
   } else if(sweets === "cheesecakes") {
     document.querySelector(".basicCheese").style.display ="inline";
     document.querySelector(".customCheese").style.display ="inline";
-    document.getElementById("veganCheckbox").style.display = "inline";
     document.getElementById("orderDate").style.display = "inline";
     document.querySelector(".pickup").style.display = "inline";
     document.querySelector(".delivery").style.display = "inline";
@@ -91,16 +93,18 @@ function chooseSweets() {
     document.querySelector(".basicCupcake").style.display = "none";
     document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("veganCupcakeCheckbox").style.display = "none";
+    document.getElementById("vegan5dollars").style.display = "none";
     document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
     document.getElementById("cookieSayings").style.display = "none";
+    document.getElementById("veganCookies").style.display = "none";
+    document.getElementById("vegan10dollars").style.display = "none";
 
   } else if(sweets === "cupcakes"){
     document.querySelector(".basicCupcake").style.display = "inline";
     document.querySelector(".customCupcake").style.display = "inline";
     document.querySelector(".cupcakeAmount").style.display = "inline";
-    document.getElementById("veganCupcakeCheckbox").style.display = "inline";
+    document.getElementById("vegan5dollars").style.display = "inline";
     document.getElementById("orderDate").style.display = "inline";
     document.querySelector(".pickup").style.display = "inline";
     document.querySelector(".delivery").style.display = "inline";
@@ -113,17 +117,18 @@ function chooseSweets() {
     document.querySelector(".basicCheese").style.display ="none";
     document.querySelector(".customCheese").style.display ="none";
     document.getElementById("cakeFrosting").style.display = "none";
-    document.getElementById("veganCheckbox").style.display = "none";
+    document.getElementById("vegan10dollars").style.display = "none";
     document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
     document.getElementById("cookieSayings").style.display = "none";
-
+    document.getElementById("veganCookies").style.display = "none";
 
 
   } else if(sweets === "cookies"){
     document.querySelector(".cookiesNote").style.display = "inline";
     document.querySelector(".cookieAmount").style.display = "inline";
     document.getElementById("cookieSayings").style.display = "inline";
+    document.getElementById("veganCookies").style.display = "inline";
     document.getElementById("orderDate").style.display = "inline";
     document.querySelector(".pickup").style.display = "inline";
     document.querySelector(".delivery").style.display = "inline";
@@ -133,24 +138,48 @@ function chooseSweets() {
     document.querySelector(".basicCupcake").style.display = "none";
     document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("veganCupcakeCheckbox").style.display = "none";
+    document.getElementById("vegan10dollars").style.display = "none";
     document.getElementById("cakeFlavors").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
     document.getElementById("sheetCakeSizes").style.display = "none";
     document.querySelector(".basicCheese").style.display ="none";
     document.querySelector(".customCheese").style.display ="none";
     document.getElementById("cakeFrosting").style.display = "none";
-    document.getElementById("veganCheckbox").style.display = "none";
+    document.getElementById("vegan5dollars").style.display = "none";
 
-  } else if(sweets === "cookiesEtsy"){
+  }  else if(sweets === "cakeCups"){
+    document.getElementById("cakeFlavors").style.display = "inline";
+    document.getElementById("vegan5dollars").style.display = "inline";
+    document.getElementById("orderDate").style.display = "inline";
+    document.querySelector(".pickup").style.display = "inline";
+    document.querySelector(".delivery").style.display = "inline";
+    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("submit").style.display = "inline";
+
+    document.getElementById("sheetCakeSizes").style.display = "none";
+    document.querySelector(".basicCheese").style.display ="none";
+    document.querySelector(".customCheese").style.display ="none";
+    document.querySelector(".basicCupcake").style.display = "none";
+    document.querySelector(".customCupcake").style.display = "none";
+    document.querySelector(".cupcakeAmount").style.display = "none";
+    document.getElementById("vegan10dollars").style.display = "none";
+    document.querySelector(".cookiesNote").style.display = "none";
+    document.querySelector(".cookieAmount").style.display = "none";
+    document.getElementById("cookieSayings").style.display = "none";
+    document.getElementById("cakeSizes").style.display = "none";
+    document.getElementById("veganCookies").style.display = "none";
+  }
+
+  else if(sweets === "cookiesEtsy"){
         window.open("https://www.etsy.com/shop/BanzasBakery");
+
   }
 
   else {
     document.getElementById("cakeFlavors").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
     document.getElementById("cakeFrosting").style.display = "none";
-    document.getElementById("veganCheckbox").style.display = "none";
+    document.getElementById("vegan10dollars").style.display = "none";
     document.getElementById("orderDate").style.display = "none";
     document.querySelector(".pickup").style.display = "none";
     document.querySelector(".delivery").style.display = "none";
@@ -164,7 +193,8 @@ function chooseSweets() {
     document.querySelector(".basicCupcake").style.display = "none";
     document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("veganCupcakeCheckbox").style.display = "none";
+    document.getElementById("vegan5dollars").style.display = "none";
+    document.getElementById("veganCookies").style.display = "none";
 
   }
 }
