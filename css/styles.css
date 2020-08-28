@@ -282,6 +282,10 @@ a:hover {
   padding: 1% 15%;
 }
 
+.card{
+  margin: 5%;
+}
+
 /*ORDER PAGE*/
 .order-section {
   padding: 1% 15%;
