@@ -4,7 +4,7 @@ function chooseSweets() {
 
   if (sweets === "threeLayerCakes") {
 
-    document.getElementById("cakeFlavors").style.display = "";
+    document.getElementById("cakeFlavors").style.display = "block";
     document.getElementById("cakeSizes").style.display = "block";
     document.getElementById("cakeFilling").style.display = "block";
     document.getElementById("vegan10dollars").style.display = "block";

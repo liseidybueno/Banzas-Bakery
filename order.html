@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
   <!-- css stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <!-- fonts  -->
 
@@ -54,6 +54,9 @@
           <li class="nav-item">
             <a class="nav-link" href="menu.html">Menu</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="order.html">Order<span class="sr-only">(current)</span></a>
           </li>
@@ -72,20 +75,20 @@
         </div>
       </div>
 
-      <form id="order-form">
+      <form id="order-form" enctype="multipart/form-data" method="post" action="order-form.php">
         <div class="form-row">
           <div class="form-group col-lg-6 col-md-6">
-            <input type="text" class="form-control" placeholder="First name" required>
+            <input type="text" class="form-control" name="fname" placeholder="First name" required>
           </div>
           <div class="form-group col-lg-6 col-md-6">
-            <input type="text" class="form-control" placeholder="Last name" required>
+            <input type="text" class="form-control" name="lname" placeholder="Last name" required>
           </div>
         </div>
         <div class="form-row form-col">
-          <input type="email" class="form-control" placeholder="Email" required>
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
         <div class="form-row form-col">
-          <select class="form-control" id="selectSweets" onchange="chooseSweets()" required>
+          <select class="form-control" id="selectSweets" name="selectSweets" onchange="chooseSweets()" required>
             <option value="" disabled selected>
               Select Sweets:
             </option>
@@ -103,7 +106,7 @@
         <!-- IF USER CHOOSES 3 layer CAKES:  -->
         <!-- select cake flavors  -->
         <div class="form-row form-col" id ="cakeFlavors">
-          <select class="form-control" id="selectCakeFlavors" required>
+          <select class="form-control" id="selectCakeFlavors" name="cakeFlavor" required>
             <option value="" disabled selected>Select Flavor:</option>
             <option value="cakechoc">Chocolate</option>
             <option value="cakevanilla">Vanilla</option>
@@ -146,7 +149,7 @@
 
         <!-- select cake sizes -->
         <div class = "form-row form-col" id="cakeSizes">
-          <select class="form-control" id="selectCakeSizes" required>
+          <select class="form-control" id="selectCakeSizes" name="3layersize" required>
             <option value="" disabled selected>Select Size:</option>
             <option value="eightIn">8" serves 15-17</option>
             <option value="nineIn">9" serves 18-20</option>
@@ -182,7 +185,7 @@
 
         <!-- select cake filling -->
         <div class = "form-row form-col" id="cakeFilling">
-          <select class="form-control" id="selectcakeFilling" required>
+          <select class="form-control" id="selectcakeFilling" name="cakeFilling" required>
             <option value="" disabled selected>Select Filling:</option>
             <option value="buttercream" id="buttercream">Buttercream</option>
             <option value="fondant" id="dulcedeleche">Dulce de Leche</option>
@@ -208,28 +211,60 @@
 
 
 <!-- $5 vegan -->
-<div class="form-check" id="vegan5dollars">
-  <input class="form-check-input" type="checkbox" value="" id="vegan5">
+
+<div id="vegan5dollars">
+  <div class="row">
+    <div class="col-lg-6">
+  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="yes" required>
   <label class="form-check-label" for="vegan5">
     Vegan: + $5
   </label>
 </div>
+  <div class="col-lg-6">
+  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="no" required>
+  <label class="form-check-label" for="vegan5">
+    Regular
+  </label>
+</div>
+</div>
+</div>
 
 <!-- $10 vegan -->
-<div class="form-check" id="vegan10dollars">
-  <input class="form-check-input" type="checkbox" value="" id="vegan10">
+<div id="vegan10dollars">
+  <div class="row">
+    <div class="col-lg-6">
+  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="yes" required>
   <label class="form-check-label" for="vegan10">
     Vegan: + $10
   </label>
+  </div>
+  <div class="col-lg-6">
+  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="no" required>
+  <label class="form-check-label" for="vegan10">
+    Regular
+  </label>
+  </div>
+</div>
 </div>
 
 <!-- vegan cookies -->
-<div class="form-check" id="veganCookies">
-  <input class="form-check-input" type="checkbox" value="" id="veganCookiesID">
+<div id="veganCookies">
+  <div class="row">
+    <div class="col-lg-6">
+  <input class="form-check-input" type="radio" name="veganCookies" id="veganCookies" value="yes" required>
   <label class="form-check-label" for="veganCookies">
     Vegan: + $3 per dozen
   </label>
 </div>
+<div class="col-lg-6">
+  <input class="form-check-input" type="radio" name="veganCookies" id="veganCookies" value="no" required>
+  <label class="form-check-label" for="veganCookies">
+    Regular
+  </label>
+</div>
+</div>
+</div>
+
 
 <!-- OPTIONS THAT APPEAR FOR ALL -->
         <br>
@@ -240,7 +275,7 @@
         <div class="col-lg-12 col-sm-12">
 
         <div class="form-check foodAllergies">
-            <input type="text" class="form-control" placeholder="List any food allergies">
+            <input type="text" class="form-control" name="allergies" placeholder="List any food allergies">
 
         </div>
 
@@ -255,7 +290,7 @@
         <!-- order date -->
         <div class="form-check" id="orderDate">
           <label for="order">Pickup/Delivery Date: </label>
-          <input type="date" value="date" id="order" required>
+          <input type="date" value="date" id="order" name="date" required>
 
         </div>
 
@@ -287,17 +322,18 @@
 
 <!-- file upload -->
 <div class="form-check uploadImg">
-  <label for="img">Have a design in mind? Upload the image here:</label>
-  <input type="file" id="img" name="img" accept="image/*">
-
+  <label for="img">Upload a design idea (required):</label>
+  <input type="file" id="img" name="uploadImg" accept="image/*" required>
+  <p>
+  </p>
 </div>
 </div>
 </div>
 
         <div class="form-row form-col" id="addComment">
-      <textarea class="form-control" rows="6" placeholder="Additional Comments"></textarea>
+      <textarea class="form-control" rows="6" name="comments" placeholder="Additional Comments"></textarea>
     </div>
-    <button type="submit" class="btn btn-dark" id="submit" onclick="checkAmount()">Submit</button>
+    <button type="submit" name="sendForm" class="btn btn-dark" id="submit" onclick="checkAmount()">Submit</button>
 
 
 
