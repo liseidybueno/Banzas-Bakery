@@ -1,3 +1,11 @@
+/*
+Theme Name: Banza's banzasbakery
+Theme URI:
+Description: A Brief Description
+Version: 1.0
+Author:Liseidy Bueno
+*/
+
 h1 {
   font-family: "Sofia";
   font-size: 4rem;
@@ -13,6 +21,21 @@ h2 {
 }
 
 h3{
+  font-family: Poppins;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #561f55;
+  padding-top: 10px;
+}
+
+h4 {
+  font-family: "Muli";
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #cf56a1;;
+}
+
+h5{
   font-family: Poppins;
   font-size: 1rem;
   font-weight: 200;
@@ -45,6 +68,8 @@ body {
   left: 0;
 }
 
+/*NAVIGATION*/
+
 .navbar-nav {
     float:none;
     margin:0 auto;
@@ -53,7 +78,7 @@ body {
 }
 
 .navbar-nav > li {
-    display: inline-block;
+   display: inline-block;
     float:none;
 }
 
@@ -66,10 +91,24 @@ body {
   color: #000000;
 }
 
+@media only screen and (max-width: 990px) {
+  .navbar-nav > li {
+    display: block;
+}
+    #navbarLogo{
+      display: none;
+    }
+
+}
+
 .logo-section {
   position: relative;
   padding-top: 7%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
+
+
 
 .logo {
   width: 400px;
@@ -248,51 +287,50 @@ a:hover {
   padding: 1% 15%;
 }
 
-#cakeFlavors{
-  display: none;
+#order-form{
+  padding-top: 2%;
 }
 
-#cakeSizes {
-  display: none;
-}
-
-#cakeFrosting {
+#cakeFlavors, #cakeSizes, #cakeFilling, #cookieFlavors, #sheetCakeSizes, #cheeseCakeFlavors, #cheeseCakeBarbieSizes, #cheesecakeQuantity {
   display: none;
 }
 
 #vegan10dollars, #vegan5dollars, #veganCookies {
   display: none;
+  padding-top: 1%;
 }
 
 #orderDate{
   display: none;
 }
 
-.pickup {
-  display: none;
-}
-
-.delivery {
+.pickup, .delivery, .foodAllergies, .uploadImg{
   display: none;
 }
 
 #addComment, #submit {
   display: none;
-  margin-top: 15px;
+  margin-top: 1%;
 }
 
-#sheetCakeSizes, #veganCupcakeCheckbox, #cookieSayings {
+.cupcakeAmount, .cookieAmount, #cupcakeFilling {
   display: none;
 }
 
-.basicCheese, .customCheese, .basicCupcake, .customCupcake, .cupcakeAmount, .cookiesNote, .cookieAmount {
-  display: none;
+.pickUpDeliveryDiv{
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
+
+.foodAllergies, .cupcakeAmount {
+  width: 100%;
+}
+
 
 
 /*CONTACT PAGE*/
 .contact-section {
-  padding: 0 15% 10% 15%;
+  padding: 0 15% 2% 15%;
 }
 
 .form-col {
@@ -301,4 +339,35 @@ a:hover {
 
 .contact-form-section{
   padding-top: 2%;
+}
+
+@media (max-width: 767px){
+  input[type=text], input[type=email] {
+  padding: 23px;
+  }
+
+  #selectSweets {
+    height: 50px;
+  }
+
+  select {
+    height: 50px;
+  }
+
+
+}
+
+/*PRICING PAGE*/
+.pricing-section{
+  padding: 1% 15%;
+}
+
+
+/*THANK YOU PAGE*/
+.thank-you {
+  text-align: center;
+  padding-top: 13%;
+  padding-left: 10%;
+  padding-right: 10%;
+
 }

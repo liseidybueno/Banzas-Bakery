@@ -4,170 +4,169 @@ function chooseSweets() {
 
   if (sweets === "threeLayerCakes") {
 
-    document.getElementById("cakeFlavors").style.display = "inline";
-    document.getElementById("cakeSizes").style.display = "inline";
-    document.getElementById("cakeFrosting").style.display = "inline";
-    document.getElementById("vegan10dollars").style.display = "inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("cakeFlavors").style.display = "";
+    document.getElementById("cakeSizes").style.display = "block";
+    document.getElementById("cakeFilling").style.display = "block";
+    document.getElementById("vegan10dollars").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".uploadImg").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
     document.getElementById("sheetCakeSizes").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
     document.getElementById("vegan5dollars").style.display = "none";
-    document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cupcakeFilling").style.display = "none";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "none";
 
 
 
   } else if(sweets === "sheetCakes") {
 
-    document.getElementById("cakeFlavors").style.display = "inline";
-    document.getElementById("sheetCakeSizes").style.display = "inline";
-    document.getElementById("cakeFrosting").style.display = "inline";
-    document.getElementById("vegan10dollars").style.display = "inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("cakeFlavors").style.display = "block";
+    document.getElementById("sheetCakeSizes").style.display = "block";
+    document.getElementById("cakeFilling").style.display = "block";
+    document.getElementById("vegan10dollars").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".uploadImg").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
     document.getElementById("cakeSizes").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
     document.getElementById("vegan5dollars").style.display = "none";
-    document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cupcakeFilling").style.display = "none";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "none";
 
 
   } else if(sweets === "barbieCakes") {
 
-    document.getElementById("cakeFlavors").style.display = "inline";
-    document.getElementById("vegan10dollars").style.display = "inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("cakeFlavors").style.display = "block";
+    document.getElementById("vegan10dollars").style.display = "block";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
-    document.getElementById("cakeSizes").style.display = "none";
     document.getElementById("sheetCakeSizes").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
     document.getElementById("vegan5dollars").style.display = "none";
-    document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
-    document.getElementById("cakeFrosting").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
-
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cupcakeFilling").style.display = "none";
+    document.getElementById("cakeFilling").style.display = "none";
+    document.getElementById("cakeSizes").style.display = "none";
+    document.querySelector(".uploadImg").style.display = "none";
 
   } else if(sweets === "cheesecakes") {
-    document.querySelector(".basicCheese").style.display ="inline";
-    document.querySelector(".customCheese").style.display ="inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("cheeseCakeFlavors").style.display="block";
+    document.getElementById("cheesecakeQuantity").style.display = "block";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
     document.getElementById("cakeFlavors").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
     document.getElementById("sheetCakeSizes").style.display = "none";
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
     document.getElementById("vegan5dollars").style.display = "none";
-    document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
     document.getElementById("vegan10dollars").style.display = "none";
+    document.getElementById("cupcakeFilling").style.display = "none";
+    document.getElementById("cakeFilling").style.display = "none";
+    document.querySelector(".uploadImg").style.display = "none";
 
   } else if(sweets === "cupcakes"){
-    document.querySelector(".basicCupcake").style.display = "inline";
-    document.querySelector(".customCupcake").style.display = "inline";
-    document.querySelector(".cupcakeAmount").style.display = "inline";
-    document.getElementById("vegan5dollars").style.display = "inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("cakeFlavors").style.display = "block";
+    document.querySelector(".cupcakeAmount").style.display = "block";
+    document.getElementById("cupcakeFilling").style.display = "block";
+    document.getElementById("vegan5dollars").style.display = "block";
+    document.querySelector(".uploadImg").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
-    document.getElementById("cakeFlavors").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
     document.getElementById("sheetCakeSizes").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.getElementById("cakeFrosting").style.display = "none";
+    document.getElementById("cakeFilling").style.display = "none";
     document.getElementById("vegan10dollars").style.display = "none";
-    document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
+    document.getElementById("cheeseCakeFlavors").style.display= "none";
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "none";
 
 
   } else if(sweets === "cookies"){
-    document.querySelector(".cookiesNote").style.display = "inline";
-    document.querySelector(".cookieAmount").style.display = "inline";
-    document.getElementById("cookieSayings").style.display = "inline";
-    document.getElementById("veganCookies").style.display = "inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.querySelector(".cookieAmount").style.display = "block";
+    document.getElementById("veganCookies").style.display = "block";
+    document.getElementById("cookieFlavors").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".uploadImg").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
+
     document.querySelector(".cupcakeAmount").style.display = "none";
     document.getElementById("vegan10dollars").style.display = "none";
     document.getElementById("cakeFlavors").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
     document.getElementById("sheetCakeSizes").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.getElementById("cakeFrosting").style.display = "none";
+    document.getElementById("cakeFilling").style.display = "none";
     document.getElementById("vegan5dollars").style.display = "none";
+    document.getElementById("cheeseCakeFlavors").style.display= "none";
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "none";
 
   }  else if(sweets === "cakeCups"){
-    document.getElementById("cakeFlavors").style.display = "inline";
-    document.getElementById("vegan5dollars").style.display = "inline";
-    document.getElementById("orderDate").style.display = "inline";
-    document.querySelector(".pickup").style.display = "inline";
-    document.querySelector(".delivery").style.display = "inline";
-    document.getElementById("addComment").style.display = "inline";
+    document.getElementById("cakeFlavors").style.display = "block";
+    document.querySelector(".cupcakeAmount").style.display = "block";
+    document.getElementById("cupcakeFilling").style.display = "block";
+    document.getElementById("vegan5dollars").style.display = "block";
+    document.querySelector(".foodAllergies").style.display = "block";
+    document.getElementById("orderDate").style.display = "block";
+    document.querySelector(".pickup").style.display = "block";
+    document.querySelector(".delivery").style.display = "block";
+    document.getElementById("addComment").style.display = "block";
     document.getElementById("submit").style.display = "inline";
 
-    document.getElementById("sheetCakeSizes").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
-    document.querySelector(".cupcakeAmount").style.display = "none";
-    document.getElementById("vegan10dollars").style.display = "none";
-    document.querySelector(".cookiesNote").style.display = "none";
-    document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
+    document.getElementById("sheetCakeSizes").style.display = "none";
+    document.getElementById("cakeFilling").style.display = "none";
+    document.getElementById("vegan10dollars").style.display = "none";
+    document.querySelector(".cookieAmount").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
+    document.getElementById("cheeseCakeFlavors").style.display= "none";
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "none";
+    document.querySelector(".uploadImg").style.display = "none";
   }
 
   else if(sweets === "cookiesEtsy"){
@@ -178,66 +177,25 @@ function chooseSweets() {
   else {
     document.getElementById("cakeFlavors").style.display = "none";
     document.getElementById("cakeSizes").style.display = "none";
-    document.getElementById("cakeFrosting").style.display = "none";
+    document.getElementById("cakeFillingg").style.display = "none";
     document.getElementById("vegan10dollars").style.display = "none";
     document.getElementById("orderDate").style.display = "none";
     document.querySelector(".pickup").style.display = "none";
     document.querySelector(".delivery").style.display = "none";
     document.getElementById("addComment").style.display = "none";
     document.getElementById("submit").style.display = "none";
-    document.querySelector(".basicCheese").style.display ="none";
-    document.querySelector(".customCheese").style.display ="none";
-    document.querySelector(".cookiesNote").style.display = "none";
     document.querySelector(".cookieAmount").style.display = "none";
-    document.getElementById("cookieSayings").style.display = "none";
-    document.querySelector(".basicCupcake").style.display = "none";
-    document.querySelector(".customCupcake").style.display = "none";
     document.querySelector(".cupcakeAmount").style.display = "none";
     document.getElementById("vegan5dollars").style.display = "none";
     document.getElementById("veganCookies").style.display = "none";
+    document.getElementById("cheeseCakeFlavors").style.display= "none";
+    document.getElementById("cheesecakeQuantity").style.display = "none";
+    document.getElementById("cheeseCakeBarbieSizes").style.display = "none";
+    document.querySelector(".uploadImg").style.display = "none";
+    document.getElementById("cupcakeFilling").style.display = "none";
+    document.querySelector(".foodAllergies").style.display = "nonee";
 
   }
-}
-
-function cakeFrosting() {
-
-  var size = document.getElementById("selectCakeSizes").value;
-
-    if(size === "eightIn"){
-
-      document.getElementById("buttercream").innerHTML = "Buttercream starts at $80";
-      document.getElementById("fondant").innerHTML = "Fondant starts at $100";
-
-  } else if(size === "nineIn"){
-
-    document.getElementById("buttercream").innerHTML = "Buttercream starts at $100";
-    document.getElementById("fondant").innerHTML = "Fondant starts at $120";
-
-  } else if(size === "tenIn"){
-
-    document.getElementById("buttercream").innerHTML = "Buttercream starts at $120";
-    document.getElementById("fondant").innerHTML = "Fondant starts at $140";
-  } else {
-  document.getElementById("buttercream").innerHTML = "";
-  document.getElementById("fondant").innerHTML = "";
-
-}
-}
-
-function sheetCakeFrosting() {
-  var size = document.getElementById("selectSheetCakeSizes").value;
-
-  if(size === "half"){
-    document.getElementById("buttercream").innerHTML = "Buttercream starts at $80";
-    document.getElementById("fondant").innerHTML="Fondant starts at $100"
-  } else if(size === "full"){
-    document.getElementById("buttercream").innerHTML = "Buttercream starts at $125";
-    document.getElementById("fondant").innerHTML="Fondant starts at $145"
-  } else {
-  document.getElementById("buttercream").innerHTML = "";
-  document.getElementById("fondant").innerHTML = "";
-
-}
 }
 
 function checkAmount() {
