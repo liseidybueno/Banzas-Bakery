@@ -5,6 +5,16 @@ ini_set('display_errors', 1);
 
 if(isset($_FILES) && (bool) $_FILES) {
 
+  //post first name, last name, and email address
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $from = $_POST['email'];
+
+  $to = "banzasbakery@liseidybueno.com";
+  $subject = "Order Form Received";
+  $headers = "From: $fname $lname $from";
+
+
   //allow extensions
   $allowedExtensions = array("jpg", "jpeg", "png", "bmp", "gif");
 
@@ -23,14 +33,6 @@ if(isset($_FILES) && (bool) $_FILES) {
     array_push($files, $file);
   }
 
-  //post first name, last name, and email address
-  $fname = $_POST['fname'];
-  $lname = $_POST['lname'];
-  $from = $_POST['email'];
-
-  $to = "banzasbakery@liseidybueno.com";
-  $subject = "Order Form Received";
-  $headers = "From: $fname $lname $from";
 
   //switch for each selecuted menu item
   swith($_POST['selectSweets']){
