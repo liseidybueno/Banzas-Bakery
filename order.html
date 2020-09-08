@@ -88,7 +88,7 @@ Feel free to submit a request using my contact form if you have any questions!</
 
       </div>
 
-      <form id="order-form" enctype="multipart/form-data" method="post" action="order-form.php">
+      <form id="order-form" enctype="multipart/form-data" method="post" action="">
         <div class="form-row">
           <div class="form-group col-lg-6 col-md-6">
             <input type="text" class="form-control" name="fname" placeholder="First name" required>
@@ -119,7 +119,7 @@ Feel free to submit a request using my contact form if you have any questions!</
         <!-- IF USER CHOOSES 3 layer CAKES:  -->
         <!-- select cake flavors  -->
         <div class="form-row form-col" id ="cakeFlavors">
-          <select class="form-control" id="selectCakeFlavors" name="cakeFlavor" required>
+          <select class="form-control" id="selectCakeFlavors" name="cakeFlavor">
             <option value="" disabled selected>Select Flavor:</option>
             <option value="cakechoc">Chocolate</option>
             <option value="cakevanilla">Vanilla</option>
@@ -131,7 +131,7 @@ Feel free to submit a request using my contact form if you have any questions!</
 
         <!-- cheesecake flavors -->
         <div class="form-row form-col" id ="cheeseCakeFlavors">
-          <select class="form-control" id="selectCheeseCakeFlavors" required>
+          <select class="form-control" id="selectCheeseCakeFlavors">
             <option value="" disabled selected>Select Flavor:</option>
             <option value="cheeseStrawberry">Strawberry</option>
             <option value="cheeseVanilla">Vanilla</option>
@@ -145,7 +145,7 @@ Feel free to submit a request using my contact form if you have any questions!</
 
         <!-- COOKIES OPTIONS -->
         <div class = "form-row form-col" id="cookieFlavors">
-          <select class="form-control" id="selectCookieFlavorss" required>
+          <select class="form-control" id="selectCookieFlavors">
             <option value="" disabled selected>Select Flavor:</option>
             <option value="plain">Sugar Cookie</option>
             <option value="cinnamonSpice">Cinnamon Spice Sugar Cookie</option>
@@ -157,13 +157,13 @@ Feel free to submit a request using my contact form if you have any questions!</
 
         <!-- cookies amount -->
         <div class="form-check cookieAmount">
-          <input type="number" class="form-control" id="cookieAmt" placeholder="Amount of Cookies (enter a number)" required>
+          <input type="number" name="cookieAmount" class="form-control" id="cookieAmt" min="12" placeholder="Amount of Cookies (enter a number)">
         </div>
 
 
         <!-- select cake sizes -->
         <div class = "form-row form-col" id="cakeSizes">
-          <select class="form-control" id="selectCakeSizes" name="3layersize" required>
+          <select class="form-control" id="selectCakeSizes" name="3layersize">
             <option value="" disabled selected>Select Size:</option>
             <option value="eightIn">8" serves 15-17</option>
             <option value="nineIn">9" serves 18-20</option>
@@ -174,7 +174,7 @@ Feel free to submit a request using my contact form if you have any questions!</
 
         <!-- select sheet cake sizes -->
         <div class = "form-row form-col" id="sheetCakeSizes" onchange = "sheetCakeFrosting()">
-          <select class="form-control" id="selectSheetCakeSizes" required>
+          <select class="form-control" id="selectSheetCakeSizes">
             <option value="" disabled selected>Select Size:</option>
             <option value="half">Half: 10.5" x 7" serves 15-17</option>
             <option value="full">Full: 14" x 10.5" serves 25-30</option>
@@ -182,9 +182,9 @@ Feel free to submit a request using my contact form if you have any questions!</
           </select>
         </div>
 
-        <!-- select cheesecake sizes -->
+        <!-- select cheesecake and barbie sizes -->
         <div class = "form-row form-col" id="cheeseCakeBarbieSizes">
-          <select class="form-control" id="selectCheeseCakeBarbieSizes" required>
+          <select class="form-control" id="selectCheeseCakeBarbieSizes">
             <option value="" disabled selected>Select Size:</option>
             <option value="half">8" serves 15-17</option>
 
@@ -193,13 +193,12 @@ Feel free to submit a request using my contact form if you have any questions!</
 
         <!-- select cheesecake quantity -->
         <div class="form-row form-col" id="cheesecakeQuantity">
-          <input type="number" name="" value="" placeholder="Quantity" required>
-
+          <input type="number" name="cheesecakeQuantity" class="form-control" min="1" id="cheesecakeAmt" placeholder="Amount of Cakes (enter a number)">
         </div>
 
         <!-- select cake filling -->
         <div class = "form-row form-col" id="cakeFilling">
-          <select class="form-control" id="selectcakeFilling" name="cakeFilling" required>
+          <select class="form-control" id="selectcakeFilling" name="cakeFilling">
             <option value="" disabled selected>Select Filling:</option>
             <option value="buttercream" id="buttercream">Buttercream</option>
             <option value="fondant" id="dulcedeleche">Dulce de Leche</option>
@@ -209,7 +208,7 @@ Feel free to submit a request using my contact form if you have any questions!</
 
         <!-- select cupcake filling -->
         <div class = "form-row form-col" id="cupcakeFilling">
-          <select class="form-control" id="selectcupcakeFilling" required>
+          <select class="form-control" id="selectcupcakeFilling">
             <option value="" disabled selected>Select Filling:</option>
             <option value="buttercream" id="none">None/option>
             <option value="fondant" id="dulcedeleche">Dulce de Leche</option>
@@ -220,8 +219,15 @@ Feel free to submit a request using my contact form if you have any questions!</
         <!-- cupcake amount -->
 
         <div class="form-check cupcakeAmount">
-          <input type="number" class="form-control" id="cupcakeAmt" placeholder="Amount of Cupcakes (enter a number)" required>
+          <input type="number" name="cupcakeAmount" class="form-control" id="cupcakeAmt" placeholder="Amount of Cupcakes (enter a number)">
         </div>
+
+        <!-- cupcake amount -->
+
+        <div class="form-check cakeCupAmount">
+          <input type="number" name="cakeCupAmount" class="form-control" min="12" id="cakeCupAmt" placeholder="Amount of CakeCups (enter a number)">
+        </div>
+
 
 
 <!-- $5 vegan -->
@@ -229,13 +235,13 @@ Feel free to submit a request using my contact form if you have any questions!</
 <div id="vegan5dollars">
   <div class="row">
     <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="yes" required>
+  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="yes">
   <label class="form-check-label" for="vegan5">
     Vegan: + $5
   </label>
 </div>
   <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="no" required>
+  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="no">
   <label class="form-check-label" for="vegan5">
     Regular
   </label>
@@ -247,13 +253,13 @@ Feel free to submit a request using my contact form if you have any questions!</
 <div id="vegan10dollars">
   <div class="row">
     <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="yes" required>
+  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="yes">
   <label class="form-check-label" for="vegan10">
     Vegan: + $10
   </label>
   </div>
   <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="no" required>
+  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="no">
   <label class="form-check-label" for="vegan10">
     Regular
   </label>
@@ -261,23 +267,26 @@ Feel free to submit a request using my contact form if you have any questions!</
 </div>
 </div>
 
-<!-- vegan cookies -->
-<div id="veganCookies">
-  <div class="row">
-    <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="veganCookies" id="veganCookies" value="yes" required>
-  <label class="form-check-label" for="veganCookies">
-    Vegan: + $3 per dozen
-  </label>
-</div>
-<div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="veganCookies" id="veganCookies" value="no" required>
-  <label class="form-check-label" for="veganCookies">
-    Regular
-  </label>
-</div>
-</div>
-</div>
+
+        <!-- vegan cookies -->
+
+        <div id="veganCookies">
+          <div class="row">
+            <div class="col-lg-6">
+          <input class="form-check-input" type="radio" name="veganCookies" id="veganCookiesOptions" value="yes">
+          <label class="form-check-label" for="veganCookiesOptions">
+            Vegan: + $3
+          </label>
+          </div>
+          <div class="col-lg-6">
+          <input class="form-check-input" type="radio" name="veganCookies" id="veganCookiesOptions" value="no">
+          <label class="form-check-label" for="veganCookiesOptions">
+            Regular
+          </label>
+          </div>
+        </div>
+        </div>
+
 
 
 <!-- OPTIONS THAT APPEAR FOR ALL -->
@@ -337,7 +346,7 @@ Feel free to submit a request using my contact form if you have any questions!</
 <!-- file upload -->
 <div class="form-check uploadImg">
   <label for="img">Upload a design idea (required):</label>
-  <input type="file" id="img" name="uploadImg" accept="image/*" required>
+  <input type="file" id="imgUpload" name="uploadImg" accept="image/*">
   <p>
   </p>
 </div>
@@ -347,17 +356,21 @@ Feel free to submit a request using my contact form if you have any questions!</
         <div class="form-row form-col" id="addComment">
       <textarea class="form-control" rows="6" name="comments" placeholder="Additional Comments"></textarea>
     </div>
-    <button type="submit" name="sendForm" class="btn btn-dark" id="submit" onclick="checkAmount()">Submit</button>
+    <button type="submit" name="sendOrderForm" class="btn btn-dark" id="submit" onclick="checkNumber()">Submit</button>
 
-
-
-      </form>
+    </form>
     </div>
 
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
   <script src="js/order.js" charset="utf-8"></script>
+
+
 
   <footer>
 

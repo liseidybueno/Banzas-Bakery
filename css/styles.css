@@ -317,8 +317,11 @@ a:hover {
   margin-top: 1%;
 }
 
-.cupcakeAmount, .cookieAmount, #cupcakeFilling {
+.cupcakeAmount, .cookieAmount, #cupcakeFilling, .cakeCupAmount {
   display: none;
+  margin-top: 1%;
+  margin-bottom:2%;
+  width: 100%;
 }
 
 .pickUpDeliveryDiv{
@@ -327,7 +330,7 @@ a:hover {
   padding: 1% 25% 0 25%;
 }
 
-.foodAllergies, .cupcakeAmount {
+.foodAllergies {
   width: 100%;
 }
 

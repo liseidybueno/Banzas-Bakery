@@ -1,36 +1,101 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Gallery</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ref="">Menu</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ref="">Order</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" ref="">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<?php
 
-<div class="row welcome">
-    <div class="col lg-12">
-
-      <h1>welcome to banza's bakery</h1>
+//if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
-    </div>
-  </div>
+if(($_SERVER["REQUEST_METHOD"] == "POST") && ($_POST['selectSweets'] == "Three Layer Cakes")) {
+
+  //post first name, last name, and email address
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $from = $_POST['email'];
+  $sweets = $_POST['selectSweets'];
+
+
+  $to = "banzasbakery@liseidybueno.com";
+  $subject = "Order Form Received";
+  $headers = "From: $fname $lname $from";
+
+  //set all variables to empty
+  $cakeFlavor = $cakeFilling = $cupcakeFilling = $cupcakeAmount = $threeLayerCakeSizes = $sheetCakeSizes = $cheeseCakeFlavor = $cheeseCakeQuantity = $cheeseCakeSize = $cookieFlavors = $cookieAmt = $vegan5 = $vegan10 = $veganCookies = "";
+
+  //order message variables to be changed within IF statements
+  //$order = "";
+
+  //set error messages to empty value
+  $error = "";
+
+  //if three layer cakes is chosen
+
+  //if($sweets === "Three Layer Cakes"){
+
+    //validate form
+    if(empty($_POST['selectCakeFlavors']) ||
+        empty($_POST['selectcakeFilling']) ||
+        empty($_POST['selectCakeSizes']) ||
+        empty($_POST['vegan10'])){
+          $error = "\n Error: all fields are required.";
+        } else {
+          $cakeFlavor = $_POST['selectCakeFlavors'];
+          $cakeFilling = $_POST['selectcakeFilling'];
+          $threeLayerCakeSizes = $_POST['selectCakeSizes'];
+          $vegan10 = $_POST['vegan10'];
+          $order = "Item: Three Layer Cake \nFlavor: $cakeFlavor\n Size: $threeLayerCakeSizesize\n Filling: $cakeFilling\n Vegan Option: $vegan10\n";
+
+          $txt = "You have received an order form from $fname $lname $from:\n \n\n";
+
+          mail($to, $subject, $txt, $order, $headers);
+            header("Location: order-thankyou.html");
+          }
+
+      /*  }
+
+} else {
+  $error = "Select wrong";
+}*/
+
+/*
+  //variables for cakes ONLY
+  $cakeFlavor = $_POST['selectCakeFlavors'];
+  $cakeFilling = $_POST['selectcakeFilling'];
+
+  //variables for cucpakes ONLY
+  $cupcakeFilling = $_POST['selectcupcakeFilling'];
+  $cupcakeAmount = $_POST['cupcakeAmount'];
+
+  //variables for 3 layer cakes only
+  $threeLayerCakeSizes = $_POST['selectCakeSizes'];
+
+  //variables for sheet cakes only
+  $sheetCakeSizes = $_POST['selectSheetCakeSizes'];
+
+  //variables for cheese cake ONLY
+  $cheeseCakeFlavor = $_POST['selectCheeseCakeFlavors'];
+  $cheeseCakeQuantity = $_POST['cheeseCakeQuantity'];
+
+  //variable for cheesecake and barbie size
+  $cheeseCakeSize = $_POST['selectCheeseCakeBarbieSizes'];
+
+  //variables for cookies ONLY
+  $cookieFlavors = $_POST['selectCookieFlavors'];
+  $cookieAmt = $_POST['cookieAmount'];
+
+  //variables for all
+  $allergies = $_POST['allergies'];
+  $date = $_POST['date'];
+  $pickUpDelivery = $_POST['pickupDelivery'];
+  $comments = $_POST['comments'];
+  if($comments === ""){
+    $comments = $_POST['comments']
+  } else {
+    $comments = "No comments";
+  }
+
+  //vegan variables
+  $vegan5 = $_POST['vegan5'];
+  $vegan10 = $_POST['vegan10'];
+  $veganCookies = $$_POST['veganCookies'];
+*/
+}
+
+ ?>

@@ -1,89 +1,65 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+if(isset($_POST['sendOrderForm'])){
 
-if(isset($_FILES) && (bool) $_FILES) {
-
-  //post first name, last name, and email address
+  //variables
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
-  $from = $_POST['email'];
+  $comment = $_POST['comments'];
+  $email = $_POST['email'];
+  $sweets = $_POST['selectSweets'];
+  $order = "";
+  $error = "";
 
-  $to = "banzasbakery@liseidybueno.com";
-  $subject = "Order Form Received";
-  $headers = "From: $fname $lname $from";
+  require_once "PHPMailer/PHPMailer.php";
+  require_once "PHPMailer/SMTP.php";
+  require_once "PHPMailer/Exception.php";
 
+  $mail = new PHPMailer();
 
-  //allow extensions
-  $allowedExtensions = array("jpg", "jpeg", "png", "bmp", "gif");
+  $mail->IsSMTP();
+  $mail->Host = "smtp.flockmail.com";
+  $mail->Port = "456";
+  $mail->Port = "80";
+  $mail->SMTPAuth = true;
+  $mail->Username = "banzasbakery@liseidybueno.com";
+  
 
-  $files = array();
+  if($sweets == "Three Layer Cakes"){
 
-  foreach($_FILES as $filename => $file) {
-    $file_name = $file('name');
-    $temp_name = $file('tmp_name');
-    $file_type = $file['type'];
-    $path_parts = pathinfo($file_name);
-    $ext = $path_parts['extensions'];
-    if (!in_array($ext, $allowedExtensions)) {
-      die("File is not an image");
-    }
+    //validate form
+    if(empty($_POST['selectCakeFlavors']) ||
+        empty($_POST['selectcakeFilling']) ||
+        empty($_POST['selectCakeSizes']) ||
+        empty($_POST['vegan10'])){
+          $error = "\n Error: all fields are required.";
+        } else {
+          $cakeFlavor = $_POST['selectCakeFlavors'];
+          $cakeFilling = $_POST['selectcakeFilling'];
+          $threeLayerCakeSizes = $_POST['selectCakeSizes'];
+          $vegan10 = $_POST['vegan10'];
+          $order = "Item: Three Layer Cake \nFlavor: $cakeFlavor\n Size: $threeLayerCakeSizesize\n Filling: $cakeFilling\n Vegan Option: $vegan10\n";
 
-    array_push($files, $file);
+          }
+        }
+
+  $body = "You have received an order form from $fname $lname $from:\n \n\n$order";
+
+  //email settings
+  $mail->From($email, $fname, $lname);
+  $mail->addAddress("banzasbakery@liseidybueno.");
+  $mail->Subject = "Order Form Received";
+  $mail->Body = $body;
+
+  if($mail->send()){
+    header("Location: order-thankyou.html");
+    exit();
+  } else {
+    echo '<script language="javascript">';
+    echo 'alert("message could not be sent")';
+    echo '</script>';
   }
-
-
-  //switch for each selecuted menu item
-  swith($_POST['selectSweets']){
-    //if selected item is 3 layered cakes
-    case 'threeLayerCakes':
-      //var for flavor
-      $flavor = $_POST['cakeFlavor'];
-      $size = $_POST['3LayerSize'];
-      $filling = $_POST['cakeFilling'];
-      $vegan = $_POST['vegan10'];
-
-      //send attachment
-      $semi_rand = md5(time());
-      $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-
-      $headers .= "\nMIME-VERSION: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
-      $message = "This is a multi-part message in MIME format\n\n" . "--{$mime_boundary}\n" . "Content-Type: text/plain; charset=\"iso-8859-1\"\n" . "Content-Transfer-Encoding: 7bit\n\n" . $message . "\n\n";
-      $message .= "--{$mime_boundary}\n";
-
-      //preparing attachments
-      for($x = 0; $x < count($files); $x++) {
-        $file = fopen($files[$x]['tmp_name'], "rb");
-        $data = fread($file, filesize($files[$x]['tmp_name']));
-        fclose($file);
-        $data = chunk_split(base64_encode($data));
-        $name = $files[$x]['name'];
-        $message .= "Content-Type: {\"application/octet-stream\"};\n" . " name=\"$name\"\n" .
-          "content-Disposition: attachment;\n" . " filename=\"$name\"\n" .
-          "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-        $message .= "--{$mime_boundary}\n";
-      }
-
-      $allergies = $_POST['allergies'];
-      $date = $_POST['date'];
-      $pickUpDelivery = $_POST['pickupDelivery'];
-      $comments = "";
-
-      if(!empty($_POST['comments'])){
-        $comments = $_POST['comments']
-      } else {
-        $comments = "No comments";
-      }
-
-  $order = "Item: Three Layer Cake \nFlavor: $flavor\n Size: $size\n Filling: $filling\n Vegan Option: $vegan\n"
-
-  $txt = "You have received an order form from $fname $lname $email_from:\n\n $message\n\n $order";
-
-  mail($to, $subject, $message, $headers, $txt);
-  header("Location: order-thankyou.html");
-
-}
 
 }
 
