@@ -1,66 +1,113 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
 
-if(isset($_POST['sendOrderForm'])){
+  require('PHPMailer/PHPMailerAutoload.php');
+  require('PHPMailer/class.smtp.php');
+  require('PHPMailer/class.phpmailer.php');
 
-  //variables
-  $fname = $_POST['fname'];
-  $lname = $_POST['lname'];
-  $comment = $_POST['comments'];
-  $email = $_POST['email'];
-  $sweets = $_POST['selectSweets'];
-  $order = "";
-  $error = "";
+  if(isset($_POST['submit'])){
 
-  require_once "PHPMailer/PHPMailer.php";
-  require_once "PHPMailer/SMTP.php";
-  require_once "PHPMailer/Exception.php";
+    //create phpmailer object
+    $mail = new PHPMailer();
 
-  $mail = new PHPMailer();
+    //set up SMTP
+    $mail->IsSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->Host = "XXXXX";
+    $mail->SMTPSecure='ssl';
+    $mail->SMTPAuth=true;
+    $mail->Port = 465;
+    $mail->Username = "XXX@XXXXXXX.com";
+    $mail->Password = "XXXXXXXX";
 
-  $mail->IsSMTP();
-  $mail->Host = "smtp.flockmail.com";
-  $mail->Port = "456";
-  $mail->Port = "80";
-  $mail->SMTPAuth = true;
-  $mail->Username = "banzasbakery@liseidybueno.com";
-  
+    $from = $_POST['email'];
+    $mail->From = "XXX@XXXXXXX.com";
+    $mail->FromName = "Order at Banza's Bakery";
+    $mail->Sender = $from;
+    $to = "XXXX@gmail.com"; //email address to be sent to
+    $mail->addAddress($to);
 
-  if($sweets == "Three Layer Cakes"){
+    //create variables for forms
+    //customer info
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $itemType = $_POST['selectSweets'];
 
-    //validate form
-    if(empty($_POST['selectCakeFlavors']) ||
-        empty($_POST['selectcakeFilling']) ||
-        empty($_POST['selectCakeSizes']) ||
-        empty($_POST['vegan10'])){
-          $error = "\n Error: all fields are required.";
-        } else {
-          $cakeFlavor = $_POST['selectCakeFlavors'];
-          $cakeFilling = $_POST['selectcakeFilling'];
-          $threeLayerCakeSizes = $_POST['selectCakeSizes'];
-          $vegan10 = $_POST['vegan10'];
-          $order = "Item: Three Layer Cake \nFlavor: $cakeFlavor\n Size: $threeLayerCakeSizesize\n Filling: $cakeFilling\n Vegan Option: $vegan10\n";
+    //cake variables
+    $threeLayerCakeSize = $_POST['3layersize'];
+    $sheetCakeSize = $_POST['sheetCakeSize'];
 
-          }
-        }
+    //cake, cupcake, cake cup cake cup variables
+    $cakeFlavor = $_POST['cakeFlavor'];
 
-  $body = "You have received an order form from $fname $lname $from:\n \n\n$order";
+    //cake and cake cup variables
+    $filling = $_POST['cakeFilling'];
 
-  //email settings
-  $mail->From($email, $fname, $lname);
-  $mail->addAddress("banzasbakery@liseidybueno.");
-  $mail->Subject = "Order Form Received";
-  $mail->Body = $body;
+    //cheesecake
+    $cheeseCakeFlavor = $_POST['cheeseCakeFlavor'];
+    $cheeseCakeAmount = $_POST['cheesecakeQuantity'];
 
-  if($mail->send()){
-    header("Location: order-thankyou.html");
-    exit();
-  } else {
-    echo '<script language="javascript">';
-    echo 'alert("message could not be sent")';
-    echo '</script>';
-  }
+    //cupcakes
+    $cupcakeAmt = $_POST['cupcakeAmount'];
 
+
+    //cheese adn barbie cake sizes
+    $cheeseCakeBarbieCakeSize = $_POST['cheeseCakeBarbieCakeSize'];
+
+    //cakecups
+    $cakeCupAmt = $_POST['cakeCupAmount'];
+
+    //cookies
+    $cookieFlavor = $_POST['cookieFlavor'];
+    $cookieAmt = $_POST['cookieAmount'];
+    $cookieFilling = $_POST['cupcakeFilling'];
+
+    //vegan
+    $vegan10 = $_POST['vegan10'];
+    $vegan5= $_POST['vegan5'];
+    $vegan3 = $_POST['veganCookies'];
+
+    //for all
+    $allergies = $_POST['allergies'];
+    $date = $_POST['date'];
+    $pickupDelivery = $_POST['pickupDelivery'];
+    $comments = $_POST['comments'];
+
+    $mail->isHTML(true);
+    $mail->Subject = "An order form has been submitted!";
+    $mail->Body="<h3>You've received an order from {$fname} {$lname}</h3>
+                <br>
+                <b>Email: </b> {$from}
+                <br>
+                <b>Item: </b> {$itemType}
+                <br>
+                <b>Flavor: </b> {$cakeFlavor} {$cheeseCakeFlavor} {$cookieFlavor}
+                <br>
+                <b>Filling: </b> {$filling} {$cookieFilling}
+                <br>
+                <b>Size: </b> {$threeLayerCakeSize} {$sheetCakeSize} {$cheeseCakeBarbieCakeSize}
+                <br>
+                <b>Amount: </b> {$cheeseCakeAmount} {$cupcakeAmt} {$cakeCupAmt} {$cookieAmt}
+                <br>
+                <b>Vegan: </b> {$vegan10} {$vegan5} {$vegan3}
+                <br>
+                <b>Allergies: </b> {$allergies}
+                <br>
+                <b>Date: </b> {$date}
+                <br>
+                <b>Pick Up/Delivery: </b> {$pickupDelivery}
+                <br>
+                <b>Comments: </b> {$comments}";
+
+
+
+    if(!$mail->Send()){
+      $error = "Please try later";
+      return $error;
+    }
+    else {
+      header("Location: order-thankyou.html");
+    }
+
+      $error=setpmailer($to, $from, $fname);
 }
-
- ?>
+?>

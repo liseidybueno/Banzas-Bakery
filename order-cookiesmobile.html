@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Order</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="faviconlogo.ico">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- css stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- fonts  -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/16aa750f43.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="lightpink-bg">
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <img src="images/logo.png" width="10%" id="navbarLogo">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="order.html">Order<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="form-section-mobile">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row selectSweetsDiv">
+            <select class="form-control selectSweetsMobile" name="selectSweets" onchange="chooseSweetsMobile()">
+              <option value="" disabled>
+                Select Sweets:
+              </option>
+              <option value="Three-Layer-Cakes">Three Layer Cakes</option>
+              <option value="Sheet-Cakes">Sheet Cakes</option>
+              <option value="Barbie-Cakes">Barbie Cakes (serves 8-10) $250</option>
+              <option value="Cheese-Cakes">Cheesecakes </option>
+              <option value="Cupcakes">Cupcakes (1 dozen minimum)</option>
+              <option value="CakeCups">Cake Cups ($35/dozen)</option>
+              <option value="Cookies" selected>Cookies $30/dozen (Pick-Up & Delivery)</option>
+              <option value="cookiesEtsy">Cookies $30/dozen + Shipping (To be shipped)</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+          <!-- FORM FOR THREE LAYER CAKES -->
+          <div  class="mobile-form-section">
+
+            <form id="three-layer-order-mobile" enctype="multipart/form-data" method="post" action="three-layer-order.php">
+              <div>
+                <div class="col-lg-6 col-md-6">
+                  <input type="text" class="form-control mobile" name="fname" placeholder="First name" required>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <input type="text" class="form-control mobile" name="lname" placeholder="Last name" required>
+                </div>
+              </div>
+              <div>
+                <input type="email" class="form-control mobile" name="email" placeholder="Email" required>
+              </div>
+
+              <!-- select cake flavors  -->
+              <div id="cakeFlavors-mobile">
+                <select class="mobileDropdown form-control" name="cookieFlavor" required>
+                  <option value="" disabled selected>Select Flavor:</option>
+                  <option value="Plain">Sugar Cookie</option>
+                  <option value="Cinnamon-Spice">Cinnamon Spice Sugar Cookie</option>
+                  <option value="Pumpkin-Spice">Pumpkin Spice Sugar Cookie</option>
+                  <option value="Lemon">Lemon Sugar Cookies</option>
+                </select>
+              </div>
+
+              <!-- cookies amount -->
+              <div class="form-check cookieAmount">
+                <input type="number" name="cookieAmount" class="form-control mobile" min="12" required placeholder="Amount of Cookies (enter a number)">
+              </div>
+
+              <!-- $10 vegan -->
+              <div class="veganCookiesMobile">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <input class="veganMobile mobileRadio" type="radio" name="veganCookies" value="Yes" required>
+                    <label class="veganMobile"for="veganCookies">
+                      Vegan: +$3
+                    </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <input class="veganMobile mobileRadio" type="radio" name="veganCookies" value="No" required>
+                    <label class="veganMobile" form-check-label"" for="veganCookies">
+                      Regular
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- food allergies -->
+              <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                  <div class="foodAllergies mobile">
+                    <input class="form-control mobile" type="text" name="allergies" placeholder="List any food allergies">
+                  </div>
+                </div>
+              </div>
+
+              <!-- order date -->
+              <div class="row pickUpDeliveryDivMobile">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="orderDate">
+                    <label class="form-check-label" for="order">Pickup/Delivery Date: </label>
+                    <br />
+                    <input type="date" value="date" class="order" name="date" required>
+                  </div>
+                </div>
+
+                <!-- pick up or delivery -->
+
+                <div class="col-lg-6 col-sm-12">
+                  <div class="pickup">
+                    <input class="mobileRadio" type="radio" name="pickupDelivery" value="pickup" required>
+                    <label for="pickup">
+                      Pick Up
+                    </label>
+                  </div>
+                  <div class="delivery">
+                    <input class="mobileRadio" type="radio" name="pickupDelivery" value="delivery" required>
+                    <label  for="delivery">
+                      Delivery
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- file upload -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="uploadImgMobile">
+                    <label for="img">Upload a design idea (required):</label>
+                    <input type="file" class="fileMobile" name="cookiesUploadImg" accept="image/*" required>
+                    <p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="addComment">
+                <textarea class="form-control mobile" rows="6" name="comments" placeholder="Additional Comments"></textarea>
+
+              <button type="submit" name="submit" class="btn btn-dark submitMobile">Submit</button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+  <script src="js/order.js" charset="utf-8"></script>
+
+
+
+  <footer>
+
+    <a href="https://www.instagram.com/banzasbakery"><i class="fab fa-instagram fa-2x"></i></a>
+    <br><br><br>
+    <p>© 2020 Banza's Bakery</p>
+    <p>
+      Site by <a href="https://liseidybueno.github.io/cv/">Liseidy Bueno</a>
+    </p>
+
+  </footer>
+
+</body>
+
+</html>

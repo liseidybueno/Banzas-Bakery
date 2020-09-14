@@ -77,296 +77,51 @@
 
       <div class="row">
         <div class="col">
-          <p>Hi there! Please fill out this order form if you're interested in placing an order. At least two weeks advance notice is preferred, less notice will depend on availability of items and will be considered on a case-by-case basis. All orders can be picked up in Norwood, Bronx. Delivery option is available depending on availability and distance, please indicate if you're interested in this option below. All orders over $100 require a 20% deposit. An email confirming your order will be sent with deposit instructions, the final order price, and delivery availability/fee within 24 hours.
-</p>
-<p>10% of ALL quarterly profits will be donated to organizations addressing the needs of the black and brown communities! Check out my Instragram (@banzasbakery) to see the organizations I've donated to, and find out how you can donate yourself!
-</p>
-<p>
-Feel free to submit a request using my contact form if you have any questions!</p>
+          <p>Hi there! Please fill out this order form if you're interested in placing an order. At least two weeks advance notice is preferred, less notice will depend on availability of items and will be considered on a case-by-case basis. All
+            orders can be picked up in Norwood, Bronx. Delivery option is available depending on availability and distance, please indicate if you're interested in this option below. All orders over $100 require a 20% deposit. An email confirming
+            your order will be sent with deposit instructions, the final order price, and delivery availability/fee within 24 hours.
+          </p>
+          <p>10% of ALL quarterly profits will be donated to organizations addressing the needs of the black and brown communities! Check out my Instragram (@banzasbakery) to see the organizations I've donated to, and find out how you can donate
+            yourself!
+          </p>
+          <p>
+            Feel free to submit a request using my contact form if you have any questions!</p>
 
         </div>
 
       </div>
 
-      <form id="order-form" enctype="multipart/form-data" method="post" action="">
-        <div class="form-row">
-          <div class="form-group col-lg-6 col-md-6">
-            <input type="text" class="form-control" name="fname" placeholder="First name" required>
-          </div>
-          <div class="form-group col-lg-6 col-md-6">
-            <input type="text" class="form-control" name="lname" placeholder="Last name" required>
-          </div>
-        </div>
-        <div class="form-row form-col">
-          <input type="email" class="form-control" name="email" placeholder="Email" required>
-        </div>
-        <div class="form-row form-col">
-          <select class="form-control" id="selectSweets" name="selectSweets" onchange="chooseSweets()" required>
-            <option value="" disabled selected>
-              Select Sweets:
-            </option>
-            <option value="threeLayerCakes">Three Layer Cakes</option>
-            <option value="sheetCakes">Sheet Cakes</option>
-            <option value="barbieCakes">Barbie Cakes (serves 8-10) $250</option>
-            <option value="cheesecakes">Cheesecakes </option>
-            <option value="cupcakes">Cupcakes (1 dozen minimum)</option>
-            <option value="cakeCups">Cake Cups ($35/dozen)</option>
-            <option value="cookies">Cookies $30/dozen (Pick-Up & Delivery)</option>
-            <option value="cookiesEtsy">Cookies $30/dozen + Shipping (To be shipped)</option>
-          </select>
-        </div>
-
-        <!-- IF USER CHOOSES 3 layer CAKES:  -->
-        <!-- select cake flavors  -->
-        <div class="form-row form-col" id ="cakeFlavors">
-          <select class="form-control" id="selectCakeFlavors" name="cakeFlavor">
-            <option value="" disabled selected>Select Flavor:</option>
-            <option value="cakechoc">Chocolate</option>
-            <option value="cakevanilla">Vanilla</option>
-            <option value="cakeredvelvet">Red Velvet</option>
-
-          </select>
-
-        </div>
-
-        <!-- cheesecake flavors -->
-        <div class="form-row form-col" id ="cheeseCakeFlavors">
-          <select class="form-control" id="selectCheeseCakeFlavors">
-            <option value="" disabled selected>Select Flavor:</option>
-            <option value="cheeseStrawberry">Strawberry</option>
-            <option value="cheeseVanilla">Vanilla</option>
-            <option value="chesseRedVelvet">Red Velvet</option>
-            <option value="cheesePumpkin">Pumpkin</option>
-
-          </select>
-
-        </div>
-
-
-        <!-- COOKIES OPTIONS -->
-        <div class = "form-row form-col" id="cookieFlavors">
-          <select class="form-control" id="selectCookieFlavors">
-            <option value="" disabled selected>Select Flavor:</option>
-            <option value="plain">Sugar Cookie</option>
-            <option value="cinnamonSpice">Cinnamon Spice Sugar Cookie</option>
-            <option value="pumpkinSpice">Pumpkin Spice Sugar Cookie</option>
-            <option value="lemon">Lemon Sugar Cookies</option>
-
-          </select>
-        </div>
-
-        <!-- cookies amount -->
-        <div class="form-check cookieAmount">
-          <input type="number" name="cookieAmount" class="form-control" id="cookieAmt" min="12" placeholder="Amount of Cookies (enter a number)">
-        </div>
-
-
-        <!-- select cake sizes -->
-        <div class = "form-row form-col" id="cakeSizes">
-          <select class="form-control" id="selectCakeSizes" name="3layersize">
-            <option value="" disabled selected>Select Size:</option>
-            <option value="eightIn">8" serves 15-17</option>
-            <option value="nineIn">9" serves 18-20</option>
-            <option value="tenIn">10" serves 21-25</option>
-
-          </select>
-        </div>
-
-        <!-- select sheet cake sizes -->
-        <div class = "form-row form-col" id="sheetCakeSizes" onchange = "sheetCakeFrosting()">
-          <select class="form-control" id="selectSheetCakeSizes">
-            <option value="" disabled selected>Select Size:</option>
-            <option value="half">Half: 10.5" x 7" serves 15-17</option>
-            <option value="full">Full: 14" x 10.5" serves 25-30</option>
-
-          </select>
-        </div>
-
-        <!-- select cheesecake and barbie sizes -->
-        <div class = "form-row form-col" id="cheeseCakeBarbieSizes">
-          <select class="form-control" id="selectCheeseCakeBarbieSizes">
-            <option value="" disabled selected>Select Size:</option>
-            <option value="half">8" serves 15-17</option>
-
-          </select>
-        </div>
-
-        <!-- select cheesecake quantity -->
-        <div class="form-row form-col" id="cheesecakeQuantity">
-          <input type="number" name="cheesecakeQuantity" class="form-control" min="1" id="cheesecakeAmt" placeholder="Amount of Cakes (enter a number)">
-        </div>
-
-        <!-- select cake filling -->
-        <div class = "form-row form-col" id="cakeFilling">
-          <select class="form-control" id="selectcakeFilling" name="cakeFilling">
-            <option value="" disabled selected>Select Filling:</option>
-            <option value="buttercream" id="buttercream">Buttercream</option>
-            <option value="fondant" id="dulcedeleche">Dulce de Leche</option>
-
-          </select>
-        </div>
-
-        <!-- select cupcake filling -->
-        <div class = "form-row form-col" id="cupcakeFilling">
-          <select class="form-control" id="selectcupcakeFilling">
-            <option value="" disabled selected>Select Filling:</option>
-            <option value="buttercream" id="none">None/option>
-            <option value="fondant" id="dulcedeleche">Dulce de Leche</option>
-
-          </select>
-        </div>
-
-        <!-- cupcake amount -->
-
-        <div class="form-check cupcakeAmount">
-          <input type="number" name="cupcakeAmount" class="form-control" id="cupcakeAmt" placeholder="Amount of Cupcakes (enter a number)">
-        </div>
-
-        <!-- cupcake amount -->
-
-        <div class="form-check cakeCupAmount">
-          <input type="number" name="cakeCupAmount" class="form-control" min="12" id="cakeCupAmt" placeholder="Amount of CakeCups (enter a number)">
-        </div>
-
-
-
-<!-- $5 vegan -->
-
-<div id="vegan5dollars">
-  <div class="row">
-    <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="yes">
-  <label class="form-check-label" for="vegan5">
-    Vegan: + $5
-  </label>
-</div>
-  <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan5" id="vegan5" value="no">
-  <label class="form-check-label" for="vegan5">
-    Regular
-  </label>
-</div>
-</div>
-</div>
-
-<!-- $10 vegan -->
-<div id="vegan10dollars">
-  <div class="row">
-    <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="yes">
-  <label class="form-check-label" for="vegan10">
-    Vegan: + $10
-  </label>
-  </div>
-  <div class="col-lg-6">
-  <input class="form-check-input" type="radio" name="vegan10" id="vegan10" value="no">
-  <label class="form-check-label" for="vegan10">
-    Regular
-  </label>
-  </div>
-</div>
-</div>
-
-
-        <!-- vegan cookies -->
-
-        <div id="veganCookies">
-          <div class="row">
-            <div class="col-lg-6">
-          <input class="form-check-input" type="radio" name="veganCookies" id="veganCookiesOptions" value="yes">
-          <label class="form-check-label" for="veganCookiesOptions">
-            Vegan: + $3
-          </label>
-          </div>
-          <div class="col-lg-6">
-          <input class="form-check-input" type="radio" name="veganCookies" id="veganCookiesOptions" value="no">
-          <label class="form-check-label" for="veganCookiesOptions">
-            Regular
-          </label>
-          </div>
-        </div>
-        </div>
-
-
-
-<!-- OPTIONS THAT APPEAR FOR ALL -->
-        <br>
-
-        <!-- food allergies -->
-        <div class="row">
-
-        <div class="col-lg-12 col-sm-12">
-
-        <div class="form-check foodAllergies">
-            <input type="text" class="form-control" name="allergies" placeholder="List any food allergies">
-
-        </div>
-
-        </div>
-
+      <div class="row selectSweetsDiv">
+        <select class="form-control" id="selectSweets" name="selectSweets" onchange="chooseSweets()">
+          <option value="" disabled selected>
+            Select Sweets:
+          </option>
+          <option value="Three-Layer-Cakes">Three Layer Cakes</option>
+          <option value="Sheet-Cakes">Sheet Cakes</option>
+          <option value="Barbie-Cakes">Barbie Cakes (serves 8-10) $250</option>
+          <option value="Cheese-Cakes">Cheesecakes </option>
+          <option value="Cupcakes">Cupcakes (1 dozen minimum)</option>
+          <option value="CakeCups">Cake Cups ($35/dozen)</option>
+          <option value="Cookies">Cookies $30/dozen (Pick-Up & Delivery)</option>
+          <option value="cookiesEtsy">Cookies $30/dozen + Shipping (To be shipped)</option>
+        </select>
       </div>
 
-<div class="row pickUpDeliveryDiv">
+      <div>
 
-  <div class="col-lg-6 col-sm-12">
+      <iframe src="" class="orderIframe">
 
-        <!-- order date -->
-        <div class="form-check" id="orderDate">
-          <label for="order">Pickup/Delivery Date: </label>
-          <input type="date" value="date" id="order" name="date" required>
+        </iframe>
+      </div>
 
-        </div>
-
-        </div>
-
-        <!-- pick up or delivery -->
-
-<div class="col-lg-6 col-sm-12">
-
-        <div class="form-check form-col pickup">
-  <input class="form-check-input" type="radio" name="pickupDelivery" id="pickUp" value="pickup" required>
-  <label class="form-check-label" for="exampleRadios1">
-    Pick Up
-  </label>
-</div>
-<div class="form-check form-col delivery">
-  <input class="form-check-input" type="radio" name="pickupDelivery" id="delivery" value="delivery" required>
-  <label class="form-check-label" for="delivery">
-    Delivery
-  </label>
-</div>
-</div>
-</div>
-
-<div class="row">
-
-<div class="col-lg-12">
-
-
-<!-- file upload -->
-<div class="form-check uploadImg">
-  <label for="img">Upload a design idea (required):</label>
-  <input type="file" id="imgUpload" name="uploadImg" accept="image/*">
-  <p>
-  </p>
-</div>
-</div>
-</div>
-
-        <div class="form-row form-col" id="addComment">
-      <textarea class="form-control" rows="6" name="comments" placeholder="Additional Comments"></textarea>
-    </div>
-    <button type="submit" name="sendOrderForm" class="btn btn-dark" id="submit" onclick="checkNumber()">Submit</button>
-
-    </form>
     </div>
 
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
   <script src="js/order.js" charset="utf-8"></script>
 

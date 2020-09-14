@@ -8,61 +8,23 @@ $("#filterMenu").change(function () {
   //if cakes are selected
   if ($("#filterMenu").val() === "dropdownCakes"){
 
-  //change css for cakes to display: block
-  $(".cakes-section").css("display", "inline-block");
-
-  //hide everything else
-  $(".cupcakes-section").css("display", "none");
-  $(".cookies-section").css("display", "none");
-  $(".other-section").css("display", "none");
-  $(".all-section").css("display", "none");
-
+  window.open("#cakeSection","_self")
   //else if cupcakes are selected
 } else if ($("#filterMenu").val() === "dropdownCupcakes"){
 
-  //show cupcakes
-  $(".cupcakes-section").css("display", "block");
-
-  //hide everything else
-  $(".cakes-section").css("display", "none");
-  $(".cookies-section").css("display", "none");
-  $(".other-section").css("display", "none");
-  $(".all-section").css("display", "none");
+  window.open("#cupcakeSection","_self")
 
 //else if cookies are selected
 } else if ($("#filterMenu").val() === "dropdownCookies"){
-  //show cookies
-  $(".cookies-section").css("display", "block");
 
-  //hide everything else
-  $(".cakes-section").css("display", "none");
-  $(".cupcakes-section").css("display", "none");
-  $(".other-section").css("display", "none");
-  $(".all-section").css("display", "none");
+  window.open("#cookieSection","_self")
 
   //else if other sweets are selected
 } else if ($("#filterMenu").val() === "dropdownOther"){
-    //show cookies
-    $(".other-section").css("display", "block");
 
-    //hide everything else
-    $(".cakes-section").css("display", "none");
-    $(".cupcakes-section").css("display", "none");
-    $(".cookies-section").css("display", "none");
-    $(".all-section").css("display", "none");
+    window.open("#otherSection","_self")
 
-    //else if all are selected
-  } else if ($("#filterMenu").val() === "dropdownAll"){
-      //show cookies
-      $(".all-section").css("display", "block");
-
-      //hide everything else
-      $(".cakes-section").css("display", "none");
-      $(".cupcakes-section").css("display", "none");
-      $(".other-section").css("display", "none");
-      $(".cookies-section").css("display", "none");
-
-    }
+  }
 });
 
 //MODAL:
