@@ -12,18 +12,18 @@
     //set up SMTP
     $mail->IsSMTP();
     $mail->SMTPDebug = 0;
-    $mail->Host = "mail.banzasbakery.com";
+    $mail->Host = "mail.XXX.com";
     $mail->SMTPSecure='ssl';
     $mail->SMTPAuth=true;
     $mail->Port = 465;
-    $mail->Username = "banzaery@banzasbakery.com";
-    $mail->Password = "LTA1975!";
+    $mail->Username = "XXX@XXXXX.com";
+    $mail->Password = "XXX";
 
     $from = $_POST['email'];
-    $mail->From = "banzaery@banzasbakery.com";
+    $mail->From = "XXX@XXXXX.com";
     $mail->FromName = "Order at Banza's Bakery";
     $mail->Sender = $from;
-    $to = "banzasbakery@gmail.com"; //email address to be sent to
+    $to = "XXX@gmail.com"; //email address to be sent to
     $mail->addAddress($to);
 
     //create variables for forms
@@ -101,18 +101,18 @@ if(isset($_POST['submitMobile'])){
   //set up SMTP
   $mail->IsSMTP();
   $mail->SMTPDebug = 0;
-  $mail->Host = "mail.banzasbakery.com";
+  $mail->Host = "mail.XXX.com";
   $mail->SMTPSecure='ssl';
   $mail->SMTPAuth=true;
   $mail->Port = 465;
-  $mail->Username = "banzaery@banzasbakery.com";
+  $mail->Username = "XXX@XXXX.com";
   $mail->Password = "LTA1975!";
 
   $from = $_POST['email'];
-  $mail->From = "banzaery@banzasbakery.com";
+  $mail->From = "XXX@XXXXX.com";
   $mail->FromName = "Order at Banza's Bakery";
   $mail->Sender = $from;
-  $to = "banzasbakery@gmail.com"; //email address to be sent to
+  $to = "XXX@gmail.com"; //email address to be sent to
   $mail->addAddress($to);
 
   //create variables for forms
