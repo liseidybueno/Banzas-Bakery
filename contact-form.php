@@ -10,27 +10,28 @@ if(isset($_POST['sendForm'])) {
 	//create phpmailer object
 	$mail = new PHPMailer();
 
-	//set up SMTP
-	$mail->IsSMTP();
-	$mail->SMTPDebug = 0;
-	$mail->Host = "mail.banzasbakery.com";
-	$mail->SMTPSecure='ssl';
-	$mail->SMTPAuth=true;
-	$mail->Port = 465;
-	$mail->Username = "banzaery@banzasbakery.com";
-	$mail->Password = "LTA1975!";
+	    //set up SMTP
+    $mail->IsSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->Host = "mail.XXX.com";
+    $mail->SMTPSecure='ssl';
+    $mail->SMTPAuth=true;
+    $mail->Port = 465;
+    $mail->Username = "XXX@XXXXX.com";
+    $mail->Password = "XXX";
+
+    $from = $_POST['email'];
+    $mail->From = "XXX@XXXXX.com";
+    $mail->FromName = "Order at Banza's Bakery";
+    $mail->Sender = $from;
+    $to = "XXX@gmail.com"; //email address to be sent to
+    $mail->addAddress($to);
 
 	$email_subject = "Contact Form Recieved!";
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
 	$email_from = $_POST['email'];
 	$message = $_POST['message'];
-
-	$mail->From = "banzaery@banzasbakery.com";
-	$mail->FromName = "Contact Form at Banza's Bakery";
-	$mail->Sender = $email_from;
-	$to = "banzasbakery@gmail.com"; //email address to be sent to
-	$mail->addAddress($to);
 
 	$mail->isHTML(true);
 	$mail->Subject = "An order form has been submitted!";
