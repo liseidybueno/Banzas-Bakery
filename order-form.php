@@ -12,19 +12,20 @@
     //set up SMTP
     $mail->IsSMTP();
     $mail->SMTPDebug = 0;
-    $mail->Host = "XXXXX";
+    $mail->Host = "mail.banzasbakery.com";
     $mail->SMTPSecure='ssl';
     $mail->SMTPAuth=true;
     $mail->Port = 465;
-    $mail->Username = "XXX@XXXXXXX.com";
-    $mail->Password = "XXXXXXXX";
+    $mail->Username = "banzaery@banzasbakery.com";
+    $mail->Password = "LTA1975!";
 
     $from = $_POST['email'];
-    $mail->From = "XXX@XXXXXXX.com";
+    $mail->From = "banzaery@banzasbakery.com";
     $mail->FromName = "Order at Banza's Bakery";
     $mail->Sender = $from;
-    $to = "XXXX@gmail.com"; //email address to be sent to
+    $to = "banzasbakery@gmail.com"; //email address to be sent to
     $mail->addAddress($to);
+
 
     //create variables for forms
     //customer info

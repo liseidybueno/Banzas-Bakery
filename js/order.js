@@ -16,7 +16,7 @@ function chooseSweets() {
       }
     }
 
-    var x = window.matchMedia("(max-width: 818px)")
+    var x = window.matchMedia("(max-width: 900px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
 
@@ -33,7 +33,7 @@ function chooseSweets() {
       }
     }
 
-    var x = window.matchMedia("(max-width: 818px)")
+    var x = window.matchMedia("(max-width: 900px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
 
@@ -51,7 +51,7 @@ function chooseSweets() {
       }
     }
 
-    var x = window.matchMedia("(max-width: 818px)")
+    var x = window.matchMedia("(max-width: 900px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
 
@@ -69,7 +69,7 @@ function chooseSweets() {
         }
       }
 
-      var x = window.matchMedia("(max-width: 818px)")
+      var x = window.matchMedia("(max-width: 900px)")
       myFunction(x) // Call listener function at run time
       x.addListener(myFunction) // Attach listener function on state changes
 
@@ -88,7 +88,7 @@ function chooseSweets() {
         }
       }
 
-      var x = window.matchMedia("(max-width: 818px)")
+      var x = window.matchMedia("(max-width: 900px)")
       myFunction(x) // Call listener function at run time
       x.addListener(myFunction) // Attach listener function on state changes
 
@@ -108,7 +108,7 @@ function chooseSweets() {
       }
     }
 
-    var x = window.matchMedia("(max-width: 818px)")
+    var x = window.matchMedia("(max-width: 900px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
 
@@ -123,22 +123,27 @@ function chooseSweets() {
 
     //media query for order page
     function myFunction(x) {
+
       if (x.matches) { // If media query matches open mobile version of site
         window.open("order-cookiesmobile.html", "_self")
       }
     }
 
-    var x = window.matchMedia("(max-width: 818px)")
+    var x = window.matchMedia("(max-width: 900px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
 
-
-  } else if ($("#selectSweets").val() === "cookiesEtsy") {
-
-          window.open("https://www.etsy.com/shop/BanzasBakery");
-  }
-
+} else if ($("#selectSweets").val() === "cookiesEtsy"){
+    window.location.assign("https://www.etsy.com/shop/BanzasBakery", "_self");
 }
+}
+
+function showAddress() {
+        var chkDelivery = document.getElementById("deliveryOption");
+        var dvAddress = document.getElementById("deliveryAddress");
+        dvAddress.style.display = chkDelivery.checked ? "block" : "none";
+    }
+
 
 function chooseSweetsMobile() {
   if($(".selectSweetsMobile").val() === "Three-Layer-Cakes"){
@@ -155,6 +160,11 @@ function chooseSweetsMobile() {
     window.open("order-cakecupsmobile.html", "_self");
   } else if($(".selectSweetsMobile").val() === "Cookies"){
     window.open("order-cookiesmobile.html", "_self");
+  } else if ($(".selectSweetsMobile").val() === "cookiesEtsy") {
+
+    window.open("https://www.etsy.com/shop/BanzasBakery", "_self");
+
+
   }
 
 

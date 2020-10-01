@@ -42,7 +42,8 @@ body {
 }
 
 @media only screen
-  and (max-width: 992px) {
+  and (max-width: 480px)
+   and (orientation : portrait) {
 
     h1 {
       font-size: 5rem;
@@ -65,11 +66,15 @@ body {
       font-size: 2rem;
     }
 
+    body{
+      font-size: 1.25rem;
+    }
+
 }
 
 
 /*title section*/
-.mainIndex{
+mainIndex{
   width: 100%;
 }
 
@@ -85,6 +90,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 
 /*NAVIGATION*/
@@ -111,18 +117,15 @@ body {
 }
 
 @media only screen
-  and (max-width: 736px)  {
+  and (max-width: 480px)
+   and (orientation : portrait) {
   .navbar-nav > li {
     display: block;
     text-align: left;
-    background-color: white;
-    opacity: .7;
   }
-  .nav-item:hover{
-    opacity: 1;
-    }
+
     .nav-link{
-      font-size: 3rem;
+      font-size: 2rem;
     }
     #navbarLogo{
       display: none;
@@ -130,50 +133,68 @@ body {
 
 }
 
-@media screen and (max-width: 992px) {
+@media only screen and (min-width: 415px)  and (max-width: 990px){
   .navbar-nav > li {
     display: block;
     text-align: left;
   }
     #navbarLogo{
       display: none;
+    }
+
+    .nav-link{
+      font-size: 2rem;
     }
 
 }
 
 .logo-section {
   position: relative;
+  width: 100%;
   padding-top: 7%;
   padding-left: 10%;
   padding-right: 10%;
 }
 
 .logo {
-  width: 400px;
+  width: 50%;
+  height: auto;
 }
 
 @media only screen
-  and (max-width: 992px) {
-  .logo {
-    width: 100%;
+  and (max-width: 480px){
+
+    .logo{
+      width: 100%;
+      height: auto;
+    }
   }
 
-  .logo-section {
+@media only screen
+  and (min-width: 415px) and (max-width: 990px) {
+
+    .logo{
+      width: 100%;
+      height: auto;
+    }
+
+ .logo-section {
     position: relative;
     padding-top: 7%;
+    display: block;
   }
 }
 
 
 /*Footer*/
 .index-footer {
-  padding-top: 100px;
   text-align: center;
   color: #000000;
   font-weight: 200;
   font-size: .9rem;
   line-height: .3;
   margin-top: 100px;
+  background-color: #FFFFFF;
 }
 
 footer {
@@ -188,14 +209,44 @@ footer {
 }
 
 @media only screen
-  and (max-width: 992px)  {
+  and (max-width: 480px)
+   and (orientation : portrait) {
+
+  .index-footer {
+    text-align: center;
+    color: #000000;
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: .8;
+    padding-top: 100px;
+    margin-top: 100px;
+    background-color: #FFFFFF;
+    position: relative;
+    display: block;
+  }
+
+  footer {
+    padding-top: 3%;
+    text-align: center;
+    color: #000000;
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: .8;
+    background-color: #FFFFFF;
+    margin-bottom: 4%;
+  }
+
+}
+
+@media only screen
+  and (min-width: 415px) and (max-width: 990px)  {
 
   .index-footer {
     padding-top: 100px;
     text-align: center;
     color: #000000;
     font-weight: 200;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: .8;
     margin-top: 100px;
   }
@@ -206,7 +257,7 @@ footer {
     color: #000000;
     font-weight: 200;
     font-size: 1.5rem;
-    line-height: .8;
+    line-height: .5;
     background-color: #FFFFFF;
     margin-bottom: 4%;
   }
@@ -240,7 +291,8 @@ a:hover {
 }
 
 @media only screen
-  and (max-width: 992px) {
+  and (max-width: 480px)
+   and (orientation : portrait) {
   .about-section {
     height: 100%;
   }
@@ -285,38 +337,20 @@ a:hover {
 }
 
 @media only screen
-  and (max-width: 992px)  {
+  and (max-width: 480px){
   .links {
     font-size: 2.3rem;
     font-weight: 100;
-  }
-
-  .galleryLinks {
-    font-size: 2rem;
-    letter-spacing: 1rem;
-    font-weight: 100;
-  }
-
-}
-
-@media only screen
-  and (max-width: 992px)  {
-  .links {
-    font-size: 1.8rem;
-    font-weight: 100;
-  }
-  .gallery-section{
-    height: 100%;
+    letter-spacing: .25rem;
   }
 
   .galleryLinks {
     font-size: 1.5rem;
-    letter-spacing: .75rem;
+    letter-spacing: .25rem;
     font-weight: 100;
   }
 
 }
-
 
 /* The Modal (background) */
 .modal {
@@ -418,15 +452,18 @@ a:hover {
   padding-top: 2%;
 }
 
+#deliveryAddress {
+  padding: 3% 5% 3% 5%;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
 .orderIframe {
   border:none;
   width: 100%;
   height: 0;
   text-align: center;
-}
-
-#three-layer-cakes {
-  padding: 0 5% 0 5%;
 }
 
 .mobile-form-section {
@@ -460,19 +497,19 @@ a:hover {
 }
 
 .fileMobile {
-  width: 40%;
-  padding: 0 5% 0 5%;
+  width: 100%;
+  padding: 0 25% 0 25%;
+  font-size: 1rem;
 }
 
+.mobileRadio {
+  padding: 0 25% 0 25%;
 
-@media only screen
-  and (min-device-width: 320px)
-  and (max-width: 991px)  {
+}
   input.mobileRadio[type=radio] {
     border: 0px;
     width: 100%;
-    height: .8em;
-}
+    height: 1rem;
 }
 
 /*CONTACT PAGE*/
@@ -489,16 +526,31 @@ a:hover {
 }
 
 @media only screen
-  and (min-device-width: 320px)
-  and (max-width: 991px) {
+  and (max-width: 480px)
+   and (orientation : portrait) {
 
 .contactLname, .contactFname, .contactEmail, .contactMessage {
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin: 2% 0 2% 0;
 }
 
 .contactSend {
-  height: 70px;
+  height: 90px;
+  font-size: 2rem;
+}
+
+}
+
+@media only screen
+  and (max-width: 990px) {
+
+.contactLname, .contactFname, .contactEmail, .contactMessage {
+  font-size: 1.5rem;
+  margin: 2% 0 2% 0;
+}
+
+.contactSend {
+  height: 80px;
   font-size: 1.5rem;
 }
 

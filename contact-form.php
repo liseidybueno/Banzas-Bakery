@@ -13,12 +13,12 @@ if(isset($_POST['sendForm'])) {
 	//set up SMTP
 	$mail->IsSMTP();
 	$mail->SMTPDebug = 0;
-	$mail->Host = "XXXXXX";
+	$mail->Host = "mail.banzasbakery.com";
 	$mail->SMTPSecure='ssl';
 	$mail->SMTPAuth=true;
 	$mail->Port = 465;
-	$mail->Username = "XXX@XXXXX.com";
-	$mail->Password = "XXXXXX";
+	$mail->Username = "banzaery@banzasbakery.com";
+	$mail->Password = "LTA1975!";
 
 	$email_subject = "Contact Form Recieved!";
   $fname = $_POST['fname'];
@@ -26,10 +26,10 @@ if(isset($_POST['sendForm'])) {
 	$email_from = $_POST['email'];
 	$message = $_POST['message'];
 
-	$mail->From = "XXX@XXXXXXX.com";
+	$mail->From = "banzaery@banzasbakery.com";
 	$mail->FromName = "Contact Form at Banza's Bakery";
 	$mail->Sender = $email_from;
-	$to = "XXXXXX@gmail.com"; //email address to be sent to
+	$to = "banzasbakery@gmail.com"; //email address to be sent to
 	$mail->addAddress($to);
 
 	$mail->isHTML(true);
